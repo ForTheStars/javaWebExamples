@@ -1,0 +1,5 @@
+package info.util;
+
+public class DBUtil {
+
+}
