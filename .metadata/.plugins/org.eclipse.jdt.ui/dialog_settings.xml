@@ -5,7 +5,10 @@
 		<item value="1|微软雅黑|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑" key="DIALOG_FONT_NAME"/>
 		<item value="679" key="DIALOG_HEIGHT"/>
 		<item value="136" key="DIALOG_X_ORIGIN"/>
-		<item value="-74" key="DIALOG_Y_ORIGIN"/>
+		<item value="-4" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="GenerateConstructorUsingFieldsSelectionDialog">
+		<item value="false" key="OmitCallToSuper"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
@@ -24,6 +27,13 @@
 			<item value="48" key="DIALOG_X_ORIGIN"/>
 			<item value="45" key="DIALOG_Y_ORIGIN"/>
 		</section>
+	</section>
+	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
+		<item value="709" key="DIALOG_WIDTH"/>
+		<item value="1|微软雅黑|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑" key="DIALOG_FONT_NAME"/>
+		<item value="867" key="DIALOG_HEIGHT"/>
+		<item value="524" key="DIALOG_X_ORIGIN"/>
+		<item value="-16" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>

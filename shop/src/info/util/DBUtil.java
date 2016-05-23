@@ -13,8 +13,6 @@ import javax.sql.DataSource;
 
 import com.sun.xml.internal.ws.Closeable;
 
-
-
 public class DBUtil {
 	public static Connection getConnection(){
 		Properties prop = PropertiesUtil.getJdbcProp();

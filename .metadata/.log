@@ -1499,3 +1499,272 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.lang.Thread.run(Thread.java:745)
+!SESSION 2016-05-23 14:57:00.506 -----------------------------------------------
+eclipse.buildId=3.7.3.201602250940-RELEASE-e45
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-05-23 14:58:01.290
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-05-23 14:58:11.852
+!MESSAGE Invalid site reference %updateSiteURL in feature com.pramati.eclipse.feature.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-05-23 14:58:11.854
+!MESSAGE Invalid site reference %updateSiteURL in feature com.pramati.eclipse.feature.
+
+!ENTRY org.eclipse.equinox.p2.publisher.eclipse 4 0 2016-05-23 14:58:11.855
+!MESSAGE Invalid site reference %updateSiteURL in feature com.pramati.eclipse.feature.
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2016-05-23 15:06:54.700
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2016-05-23 15:06:54.700
+!MESSAGE session context was:(profile=DefaultProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.700
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.701
+!MESSAGE No repository found containing: osgi.bundle,org.sonatype.m2e.buildhelper,0.15.0.201212120353
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.701
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.701
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.sonatype.m2e.buildhelper.feature,0.15.0.201212120353
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2016-05-23 15:06:54.703
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2016-05-23 15:06:54.703
+!MESSAGE session context was:(profile=DefaultProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: osgi.bundle,org.sonatype.m2e.buildhelper,0.15.0.201212120353
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 15:06:54.703
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.sonatype.m2e.buildhelper.feature,0.15.0.201212120353
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2016-05-23 15:32:03.478
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2016-05-23 15:32:03.479
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin org.eclipse.cft.server.branding.core.
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2016-05-23 15:35:52.828
+!MESSAGE Full project indexing required:
+  [+] D:\GitHub_code\javaWebExamples\shop\WebContent\WEB-INF\lib\log4j-1.2.16.jar
+  [+] D:\GitHub_code\javaWebExamples\shop\WebContent\WEB-INF\lib\mybatis-3.1.1.jar
+  [+] D:\GitHub_code\javaWebExamples\shop\WebContent\WEB-INF\lib\mysql-connector-java-5.1.27-bin.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:167)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+!SESSION 2016-05-23 22:30:06.035 -----------------------------------------------
+eclipse.buildId=3.7.3.201602250940-RELEASE-e45
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-05-23 22:30:33.706
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2016-05-23 22:32:02.859
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin com.vmware.vfabric.ide.eclipse.tcserver.core.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2016-05-23 22:32:02.860
+!MESSAGE Project facet grails.app has not been defined. It is used in plugin org.eclipse.cft.server.branding.core.
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2016-05-23 22:34:51.683
+!MESSAGE Full project indexing required:
+  [+] D:\GitHub_code\javaWebExamples\shop\WebContent\WEB-INF\lib\log4j-1.2.16.jar
+  [+] D:\GitHub_code\javaWebExamples\shop\WebContent\WEB-INF\lib\mybatis-3.1.1.jar
+  [+] D:\GitHub_code\javaWebExamples\shop\WebContent\WEB-INF\lib\mysql-connector-java-5.1.27-bin.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:167)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2016-05-23 22:37:06.626
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2016-05-23 22:37:06.626
+!MESSAGE session context was:(profile=DefaultProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.626
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.626
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.626
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.626
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.626
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.626
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: osgi.bundle,org.sonatype.m2e.buildhelper,0.15.0.201212120353
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.627
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.sonatype.m2e.buildhelper.feature,0.15.0.201212120353
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2016-05-23 22:37:06.628
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2016-05-23 22:37:06.628
+!MESSAGE session context was:(profile=DefaultProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.6.3.20160209-1444
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: osgi.bundle,org.sonatype.m2e.buildhelper,0.15.0.201212120353
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.6.3.20160209-1446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-05-23 22:37:06.628
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.sonatype.m2e.buildhelper.feature,0.15.0.201212120353
