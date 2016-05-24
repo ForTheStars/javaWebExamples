@@ -5,7 +5,21 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-05-18T22:28:00Z</updated>
+  <updated>2016-05-24T07:51:00Z</updated>
+  <entry>
+    <title>Webinar: Understanding microservice latency: An introduction to Distributed Tracing and Zipkin</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/24/webinar-understanding-microservice-latency-an-introduction-to-distributed-tracing-and-zipkin" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-05-24:2506</id>
+    <updated>2016-05-24T07:51:00Z</updated>
+    <content type="html">&lt;p&gt;Speakers: Adrian Cole &amp;amp; Marcin Grzejszczak, Pivotal&lt;/p&gt;
+&lt;p&gt;Latency analysis is the act of blaming components for causing user perceptible delay. In today&amp;rsquo;s world of microservices, this can be tricky as requests can fan out across polyglot components and even data-centers. In many cases, the root source of latency isn&amp;rsquo;t a component, but rather a link between components. This session will overview how to debug latency problems, using call graphs created by Zipkin. We&amp;rsquo;ll use trace zipkin itself, setting up from scratch using docker.&lt;/p&gt;
+&lt;p&gt;While we&amp;rsquo;re at it, we&amp;rsquo;ll discuss how the model works, and how to safely trace production. Finally, we&amp;rsquo;ll overview the ecosystem, including tools to trace ruby, c#, java and spring boot apps. When you leave, you&amp;rsquo;ll at least know something about distributed tracing, and hopefully be on your way to blaming things for causing latency!&lt;/p&gt;
+&lt;p&gt;Thursday, June 30th, 2016 3:00PM London GMT &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMMicroserviceLatency_ZipkinDistributedTracing_Q216_Register.html"&gt;Register&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Thursday, June 30th, 2016 10:00AM PST (San Francisco GMT-08:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMMicroserviceLatency_ZipkinDistributedTracing_Q216_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Roo 2.0.0M2 released</title>
     <link rel="alternate" href="https://spring.io/blog/2016/05/18/spring-roo-2-0-0m2-released" />
@@ -870,139 +884,5 @@ void updateUserActiveState(boolean activeState, Integer... ids);
 &lt;p&gt;I also have ideas on how to improve the user experience when configuring either Pivotal GemFire or Apache Geode using &lt;em&gt;Spring&lt;/em&gt; &lt;a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#beans-java"&gt;Java-based configuration&lt;/a&gt;. You can track my progress on this effort in &lt;a href="https://jira.spring.io/browse/SGF-492"&gt;SGF-492&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As always, feedback or help is greatly appreciated.&lt;/p&gt;
 &lt;p&gt;Happy coding my friends!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow 1.0.0 M3 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-1-0-0-m3-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mark Fisher</name>
-    </author>
-    <id>tag:spring.io,2016-04-29:2487</id>
-    <updated>2016-04-29T19:54:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce the 1.0.0.M3 release of &lt;a target="_blank" href="http://cloud.spring.io/spring-cloud-dataflow/"&gt;Spring Cloud Data Flow&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Over the last few months, we have added exciting new features and improvements to the overall orchestration of data microservices on a variety of platforms. We have also made some changes that significantly benefit developers, such as exposing &lt;a target="_blank" href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-starter-poms"&gt;Spring Boot Starters&lt;/a&gt; for all of the &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-stream-app-starters"&gt;stream&lt;/a&gt; and &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-task-app-starters"&gt;task&lt;/a&gt; applications we publish. Following are some of the highlights from this release:&lt;/p&gt;
-&lt;div class="ulist"&gt;&#xD;
-&lt;ul&gt;&#xD;
-&lt;li&gt;Provides the foundation for the following Data Flow Server implementations that have also been released today:&#xD;
-&lt;ul&gt;&#xD;
-&lt;li&gt;&#xD;
-Spring Cloud Data Flow’s &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-cloud-foundry-1-0-0-m2-released"&gt;Cloud Foundry Server&lt;/a&gt; 1.0.0.M2&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Spring Cloud Data Flow’s &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-mesos-and-kubernetes-1-0-0-m2-versions-released"&gt;Kubernetes Server&lt;/a&gt; 1.0.0.M2&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Spring Cloud Data Flow’s &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-yarn-1-0-0-m2-released"&gt;Apache YARN Server&lt;/a&gt; 1.0.0.M2&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Spring Cloud Data Flow’s &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-data-flow-for-apache-mesos-and-kubernetes-1-0-0-m2-versions-released"&gt;Apache Mesos Server&lt;/a&gt; 1.0.0.M2&#xD;
-&lt;/li&gt;&#xD;
-&lt;/ul&gt;&#xD;
-&lt;/li&gt;&#xD;
-&#xD;
-&lt;li&gt;&#xD;
-Introduces and builds upon the &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-deployer"&gt;Spring Cloud Deployer&lt;/a&gt; Service Provider Interface&#xD;
-&lt;/li&gt;&#xD;
-&lt;div class="ulist"&gt;&#xD;
-&lt;ul&gt;&#xD;
-&lt;li&gt;&#xD;
-New multi-platform application deployment model factored out of Spring Cloud Data Flow itself for general purpose use, including &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-deployer/blob/master/spring-cloud-deployer-spi/src/main/java/org/springframework/cloud/deployer/spi/app/AppDeployer.java"&gt;AppDeployer&lt;/a&gt; and &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-deployer/blob/master/spring-cloud-deployer-spi/src/main/java/org/springframework/cloud/deployer/spi/task/TaskLauncher.java"&gt;TaskLauncher&lt;/a&gt; to deploy long-running and short-lived microservices, respectively. &#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Improved application resolution strategy with support for maintaining a registry of applications as &lt;code&gt;http&lt;/code&gt;, &lt;code&gt;file&lt;/code&gt;, &lt;code&gt;maven&lt;/code&gt;, &lt;code&gt;docker&lt;/code&gt;, or &lt;code&gt;hdfs&lt;/code&gt; artifacts&#xD;
-&lt;/li&gt;&#xD;
-&lt;/ul&gt;&#xD;
-&lt;/div&gt;&#xD;
-&#xD;
-&lt;li&gt;&#xD;
-Builds upon &lt;a target="_blank" href="http://cloud.spring.io/spring-cloud-stream"&gt;Spring Cloud Stream&lt;/a&gt; 1.0.0.RC3 &#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Builds upon &lt;a target="_blank" href="https://spring.io/blog/2016/04/29/spring-cloud-task-1-0-0-m2-is-now-available"&gt;Spring Cloud Task&lt;/a&gt; 1.0.0.M2&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Improves DSL support for streaming and batch pipelines&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Adds "tap" support for streaming and batch pipelines&#xD;
-&lt;/li&gt;&#xD;
-&#xD;
-&lt;li&gt;&#xD;
-Applications&#xD;
-&lt;/li&gt;&#xD;
-&lt;div class="ulist"&gt;&#xD;
-&lt;ul&gt;&#xD;
-&lt;li&gt;&#xD;
-Supports out-of-the-box stream applications built from the new &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-stream-app-starters"&gt;Stream Application Starters&lt;/a&gt; project (auto-generated apps for both Kafka and RabbitMQ binders)&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Supports out-of-the-box task applications built from the new &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-task-app-starters"&gt;Task Application Starters&lt;/a&gt; project&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Adds several new out-of-the-box stream and task applications&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Improves custom application registration mechanics from the Shell and Dashboard&#xD;
-&lt;/li&gt;&#xD;
-&lt;/ul&gt;&#xD;
-&lt;/div&gt;&#xD;
-&#xD;
-&lt;li&gt;&#xD;
-Dashboard&#xD;
-&lt;/li&gt;&#xD;
-&lt;div class="ulist"&gt;&#xD;
-&lt;ul&gt;&#xD;
-&lt;li&gt;&#xD;
-New and improved Dashboard&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Adds Batch and Task support&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Adds "Apps" tab to &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-dataflow/blob/master/spring-cloud-dataflow-docs/src/main/asciidoc/images/dataflow-available-apps-list.png"&gt;monitor and manage&lt;/a&gt; out-of-the-box and custom applications&#xD;
-&lt;/li&gt;&#xD;
-&lt;/ul&gt;&#xD;
-&lt;/div&gt;&#xD;
-&lt;li&gt;&#xD;
-&lt;a target="_blank" href="https://network.pivotal.io/products/p-flo-for-spring-cloud-data-flow"&gt;Flo for Spring Cloud Data Flow&lt;/a&gt;&#xD;
-&lt;/li&gt;&#xD;
-&lt;div class="ulist"&gt;&#xD;
-&lt;ul&gt;&#xD;
-&lt;li&gt;&#xD;
-Modern look and feel with several UX improvements around the palette, auto-layouts, auto-linking, canvas, nodes, node connectors, and many more&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Adds support for a scriptable-transform processor that accepts ruby, groovy, python, or javascript code for runtime compute logic&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Adds visual distinction between primary and tap’d pipelines&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Adapts to Angular style tooltips&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Graph layout optimizations &#xD;
-&lt;/li&gt;&#xD;
-&lt;/ul&gt;&#xD;
-&lt;/div&gt;&#xD;
-&lt;iframe width="420" height="315" src="https://www.youtube.com/embed/78CgV46OstI" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
-&lt;li&gt;&#xD;
-&#xD;
-&#xD;
-Improved IT and TCK tests&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
-Adds new &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-dataflow-samples"&gt;samples&lt;/a&gt;&#xD;
-&lt;/li&gt;&#xD;
-&lt;li&gt;&#xD;
- Adds new &lt;a target="_blank" href="http://cloud.spring.io/spring-cloud-dataflow/"&gt;logo&lt;/a&gt;&#xD;
-&lt;/li&gt;&#xD;
-&lt;/ul&gt;&#xD;
-&lt;/div&gt;
-&lt;p&gt;For the complete list of features, bug-fixes, and improvements, please refer to the closed &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-dataflow/issues?q=milestone:1.0.0.M3"&gt;1.0.0.M3&lt;/a&gt; GitHub issues.&lt;/p&gt;
-&lt;p&gt;We welcome feedback and contributions! If you have any questions, comments or suggestions, please let us know via &lt;a target="_blank" href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub Issues&lt;/a&gt;, &lt;a target="_blank" href="http://stackoverflow.com/tags/spring-cloud-dataflow"&gt;StackOverflow&lt;/a&gt;, or using the #SpringCloudDataFlow hashtag on Twitter.&lt;/p&gt;
-&lt;p&gt;We have aggressive plans for the upcoming RC release. Stay tuned!&lt;/p&gt;
-&lt;p&gt;Last but not least&amp;hellip; check out this &lt;a href="http://pivotal.io/spring-app-framework"&gt;brand new website&lt;/a&gt; to learn how Spring Accelerates Cloud Native Java Application Development!&lt;/p&gt;</content>
   </entry>
 </feed>
