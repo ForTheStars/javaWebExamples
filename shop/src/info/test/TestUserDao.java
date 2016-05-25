@@ -22,16 +22,16 @@ public class TestUserDao {
 	@Test
 	public void testAdd(){
 		User u = new User();
-		u.setNickname("曹操");
-		u.setPassword("123");
+		u.setNickname("haha");
+		u.setPassword("666");
 		u.setType(1);
-		u.setUsername("cc");
+		u.setUsername("6g6");
 		ud.add(u);
 	}
 	
 	@Test
 	public void testUpdate() {
-		User u = ud.loadByUsername("cc");
+		User u = ud.loadByUsername("6g6");
 		u.setPassword("2222");
 		ud.update(u);
 	}
@@ -44,7 +44,7 @@ public class TestUserDao {
 	
 	@Test
 	public void testLogin() {
-		User u = ud.login("wukong", "123");
+		User u = ud.login("admin", "123");
 		System.out.println(u.getClass().getName());
 		System.out.println(u.getNickname());
 	}

@@ -21,15 +21,15 @@ public class TestAddressDao {
 	@Test
 	public void testAdd() {
 		Address address = new Address();
-		address.setName("浙江省义乌市");
+		address.setName("浙江丽水市");
 		address.setPhone("114");
-		address.setPostcode("652000");
-		addressDao.add(address, 2);
+		address.setPostcode("222233");
+		addressDao.add(address, 1);
 	}
 	
 	@Test
 	public void testList() {
-		List<Address> list = addressDao.list(1);
+		List<Address> list = addressDao.list(3);
 		for(Address a:list) {
 			System.out.println(a.getName()+","+a.getUser());
 		}

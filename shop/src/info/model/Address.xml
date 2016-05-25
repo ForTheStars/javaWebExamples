@@ -21,13 +21,16 @@
 	<!-- 当数据库中的字段信息和对象的属性不一致时需要通过resultMap来映射 -->
 	<resultMap type="Address" id="addressMap" autoMapping="true">
 		<id column="a_id" property="id"/>
-		<association property="user" javaType="User" resultMap="userMap">
+		<!-- 使用以下方式进行关联最大的问题就是N+1问题，所以以下取关联的方式不会被使用 -->
+		<!-- <association property="user" column="user_id" javaType="User" select="itat.zttc.shop.model.User.load"/> -->
+		<association property="user" javaType="User">
 			<id column="user_id" property="id"/>
 			<result column="username" property="username"/>
 			<result column="nickname" property="nickname"/>
 			<result column="type" property="type"/>
 		</association>
 	</resultMap>
+	<!-- collection 一对多，association 一对一 -->
 	
 	<select id="load" parameterType="int" resultMap="addressMap">
 		select *,t1.id as 'a_id' from t_address t1 right join t_user t2 on(t1.user_id=t2.id) where t1.id=#{id}

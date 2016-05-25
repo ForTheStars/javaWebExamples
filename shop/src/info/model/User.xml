@@ -10,7 +10,7 @@
   	</insert>
   	
   	<update id="update" parameterType="User">
-  		update t_user nickname=#{nickname},password=#{password},type=#{type} where id=#{id}
+  		update t_user set nickname=#{nickname},password=#{password},type=#{type} where id=#{id}
   	</update>
   	
   	<delete id="delete" parameterType="int">

@@ -5,7 +5,31 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-05-24T07:51:00Z</updated>
+  <updated>2016-05-25T01:25:00Z</updated>
+  <entry>
+    <title>This Week in Spring - May 24th, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/25/this-week-in-spring-may-24th-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-05-25:2507</id>
+    <updated>2016-05-25T01:25:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installation of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week&amp;rsquo;s already off to a crazy start. Sunday evening I returned from Kiev, Ukraine, where I spoke at JEEConf. Yesterday, Monday, I gave a talk &lt;a href="http://twitter.com/jbaruch"&gt;with my friend Baruch&lt;/a&gt; from JFrog at yesterday&amp;rsquo;s JFrog Swampup conference event in Napa, California. Today I&amp;rsquo;m off to Denver, Colorado for Gluecon, and then off to GOTO Chicago in Chicago, Illinois and I&amp;rsquo;ll finish out the week in Washington DC for customer visits. I can&amp;rsquo;t wait to see you all along the way!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I hope you&amp;rsquo;ll register for this &lt;a href="https://spring.io/blog/2016/05/24/webinar-understanding-microservice-latency-an-introduction-to-distributed-tracing-and-zipkin"&gt;upcoming webinar on distributed tracing with the Spring Cloud team&amp;rsquo;s very own Adrian Cole and Marcin Grzejszczak&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Wow! &lt;a href="https://spring.io/blog/2016/05/18/spring-roo-2-0-0m2-released"&gt;Spring Roo 2.0M2 is &lt;em&gt;packed&lt;/em&gt;&lt;/a&gt; with lots of cool looking features supporting Spring Boot and removing the older ActiveRecord-style support in favor of proper Spring Data repositories&lt;/li&gt;
+  &lt;li&gt;I really liked Stormpath founder and CTO Les Hazlewood&amp;rsquo;s post on how &lt;a href="https://stormpath.com/blog/spring-boot-migration"&gt;they moved their entire backend API to Spring Boot in a matter of three weeks&lt;/a&gt; &lt;em&gt;while&lt;/em&gt; embracing Spring Boot&amp;rsquo;s autoconfiguration to solve a few problems of their own, like a Samza auto-configuration.&lt;/li&gt;
+  &lt;li&gt;the Udemy &lt;a href="https://www.udemy.com/microservices-with-spring-cloud/"&gt;Spring Cloud workshop online looks pretty cool&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Hey, this looks interesting: a framework &lt;a href="https://bitbucket.org/atlassian/atlassian-connect-spring-boot"&gt;to use Spring Boot to build Atlassian Connect modules&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this is a cool (Portugues language) &lt;a href="http://www.devall.com.br/blog/show/899"&gt;post on externalizing configuration with Spring Cloud Config&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I dig Dr. Xinyu Liu&amp;rsquo;s post on how &lt;a href="http://www.javaworld.com/article/3062899/big-data/lightning-fast-nosql-with-spring-data-redis.html"&gt;to build lightning fast NoSQL solutions with Spring Data Redis&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Did you miss Spring I/O in sunny Barcelona, Spain? The replays will be online shortly but in the meantime, check out the slides to Spring Cloud Stream-lead Marius Bogoevici&amp;rsquo;s talk &lt;a href="https://speakerdeck.com/mbogoevici/cloud-native-streaming-and-event-driven-microservices"&gt;on streaming- and event-driven microservices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://www.cnblogs.com/lazio10000/p/5510852.html"&gt;I dig this Chinese-language translation&lt;/a&gt; of our own Paul Chapman&amp;rsquo;s &lt;a href="https://spring.io/blog/2015/07/14/microservices-with-spring"&gt;post on building microservices with Spring Cloud&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Interesting (I&amp;rsquo;m pretty sure, at least!) &lt;a href="http://dev.classmethod.jp/server-side/java/spring-data-dynamodb/"&gt;Japanese-language post on Spring Data DynamoDB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this looks to be a nice &lt;a href="https://speakerdeck.com/sinsengumi/spring-boot-application-infrastructure"&gt;Japanese-language slidedeck on using Spring Boot for application infrastructure&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Webinar: Understanding microservice latency: An introduction to Distributed Tracing and Zipkin</title>
     <link rel="alternate" href="https://spring.io/blog/2016/05/24/webinar-understanding-microservice-latency-an-introduction-to-distributed-tracing-and-zipkin" />
@@ -845,44 +869,5 @@ void updateUserActiveState(boolean activeState, Integer... ids);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Or just have a little fun and translate existing annotations into your &lt;a href="https://github.com/sbrannen/spring-polyglot"&gt;favorite language&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The Spring Data team is coming to Las Vegas! Be sure to join us for a lot of sessions on Spring Data at this year&amp;rsquo;s SpringOne Platform. The first batch of featured talks has already been &lt;a href="http://springoneplatform.io/sessions"&gt;published&lt;/a&gt; on the event&amp;rsquo;s website. Be sure to &lt;a href="https://2016.event.springoneplatform.io/register"&gt;register&lt;/a&gt; to learn about the latest and greatest in Spring Data, the Spring Framework ecosystem in general as well as everything related to CloudFoundry.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Data Geode 1.0.0.APACHE-GEODE-INCUBATING-M2 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/04/29/spring-data-geode-1-0-0-apache-geode-incubating-m2-released" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>John Blum</name>
-    </author>
-    <id>tag:spring.io,2016-04-29:2483</id>
-    <updated>2016-04-29T23:31:00Z</updated>
-    <content type="html">&lt;p&gt;I am pleased to announce the release of &lt;em&gt;Spring Data Geode&lt;/em&gt; 1.0.0.APACHE-GEODE-INCUBATING-M2, offering support for the recently &lt;a href="http://markmail.org/message/v6obupp2ruicnahd"&gt;announced&lt;/a&gt; &lt;em&gt;Apache Geode&lt;/em&gt; 1.0.0-incubating.M2 release.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Spring Data Geode&lt;/em&gt; is a specific version of &lt;em&gt;Spring Data GemFire&lt;/em&gt; with support for &lt;a href="http://geode.incubator.apache.org/"&gt;Apache Geode&lt;/a&gt; rather than &lt;a href="https://pivotal.io/big-data/pivotal-gemfire"&gt;Pivotal GemFire&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Both &lt;em&gt;Spring Data GemFire&lt;/em&gt; and &lt;em&gt;Spring Data Geode&lt;/em&gt; are based on the same &lt;a href="https://github.com/spring-projects/spring-data-gemfire"&gt;source repository in GitHub&lt;/a&gt;, however, Apache Geode support lives in the &lt;a href="https://github.com/spring-projects/spring-data-gemfire/tree/apache-geode"&gt;apache-geode&lt;/a&gt; branch. Therefore, you won&amp;rsquo;t find a separate &lt;a href="http://projects.spring.io/spring-data/"&gt;Spring Data project&lt;/a&gt; specifically for Apache Geode, but this is of little consequence since your existing knowledge of Pivotal GemFire combined with &lt;em&gt;Spring Data GemFire&lt;/em&gt; will be immediately useful and transferable to &lt;em&gt;Apache Geode&lt;/em&gt; and &lt;em&gt;Spring Data Geode&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Last year I wrote a &lt;a href="https://spring.io/blog/2015/06/12/spring-data-gemfire-supports-apache-geode"&gt;blog post&lt;/a&gt; detailing &lt;em&gt;Spring Data GemFire&amp;rsquo;s&lt;/em&gt; support of Apache Geode. However, many things have changed since then.&lt;/p&gt;
-&lt;p&gt;First and foremost, the &lt;em&gt;Spring Data GemFire&lt;/em&gt;, Apache Geode support now has a separate artifact, &lt;code&gt;spring-data-geode&lt;/code&gt;. Additionally, I have opted for a more logical and intuitive version number, &lt;code&gt;1.0.0.APACHE-GEODE-INCUBATING-M2&lt;/code&gt;. And finally, the new artifact/version is even available in &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cspring-data-geode"&gt;Maven Central&lt;/a&gt; now, like &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cgeode"&gt;Apache Geode&lt;/a&gt; itself. Yay!&lt;/p&gt;
-&lt;p&gt;So, a developer need only declare the following dependency in her Maven POM or &lt;code&gt;build.gradle&lt;/code&gt; file to start developing Apache Geode applications with &lt;em&gt;Spring&lt;/em&gt;&amp;hellip;&lt;/p&gt;&lt;h4&gt;&lt;a href="#maven-pom" class="anchor" name="maven-pom"&gt;&lt;/a&gt;// Maven POM&lt;/h4&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;dependency&amp;gt;&#xD;
-    &amp;lt;groupId&amp;gt;org.springframework.data&amp;lt;/groupId&amp;gt;&#xD;
-    &amp;lt;artifactId&amp;gt;spring-data-geode&amp;lt;/artifactId&amp;gt;&#xD;
-    &amp;lt;version&amp;gt;1.0.0.APACHE-GEODE-INCUBATING-M2&amp;lt;/version&amp;gt;&#xD;
-&amp;lt;/dependency&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;&lt;a href="#build-gradle" class="anchor" name="build-gradle"&gt;&lt;/a&gt;// build.gradle&lt;/h4&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;dependencies {&#xD;
-    compile &amp;#39;org.springframework.data:spring-data-geode:1.0.0.APACHE-GEODE-INCUBATING-M2&amp;#39;&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The separate artifact will help users more easily distinguish the support for Apache Geode from the long-time support of Pivotal GemFire using &lt;em&gt;Spring Data GemFire&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;The version number (&lt;code&gt;1.0.0&lt;/code&gt;) along with the version qualifier (&lt;code&gt;APACHE-GEODE-INCUBATING-M2&lt;/code&gt;) not only indicates the level of maturity for both &lt;em&gt;Spring Data Geode&lt;/em&gt; and Apache Geode, but correspond to one another and also indicates what &lt;a href="http://geode.incubator.apache.org/releases/"&gt;release version&lt;/a&gt; of Apache Geode is being supported.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new" class="anchor" name="what-rsquo-s-new"&gt;&lt;/a&gt;What&amp;rsquo;s New?&lt;/h2&gt;
-&lt;p&gt;This release includes support for &lt;em&gt;Apache Geode&amp;rsquo;s&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://cwiki.apache.org/confluence/display/GEODE/Off-Heap+Memory"&gt;Off-Heap Memory&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://geode.docs.pivotal.io/docs/developing/continuous_querying/chapter_overview.html"&gt;Continuous Queries (CQ)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Multi-site &lt;a href="http://geode.docs.pivotal.io/docs/topologies_and_comm/multi_site_configuration/chapter_overview.html"&gt;WAN&lt;/a&gt; topology configuration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;More information about Apache Geode can be found on the &lt;a href="http://geode.incubator.apache.org/"&gt;website&lt;/a&gt;. Please refer to the &lt;em&gt;Spring Data GemFire&lt;/em&gt; &lt;a href="http://projects.spring.io/spring-data-gemfire/"&gt;project page&lt;/a&gt; along with the &lt;a href="http://docs.spring.io/spring-data-gemfire/docs/1.8.1.RELEASE/reference/html"&gt;reference guide&lt;/a&gt; on how to effectively build &lt;em&gt;Spring&lt;/em&gt; applications using Apache Geode.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s Next?&lt;/h2&gt;
-&lt;p&gt;I plan to finish the &lt;em&gt;Spring Boot&lt;/em&gt; &lt;a href="https://github.com/spring-projects/spring-boot/pull/5445"&gt;Starter&lt;/a&gt; for Apache Geode along with &lt;em&gt;Spring Session&lt;/em&gt; &lt;a href="https://github.com/spring-projects/spring-session/pull/366"&gt;support&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I also have ideas on how to improve the user experience when configuring either Pivotal GemFire or Apache Geode using &lt;em&gt;Spring&lt;/em&gt; &lt;a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#beans-java"&gt;Java-based configuration&lt;/a&gt;. You can track my progress on this effort in &lt;a href="https://jira.spring.io/browse/SGF-492"&gt;SGF-492&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;As always, feedback or help is greatly appreciated.&lt;/p&gt;
-&lt;p&gt;Happy coding my friends!&lt;/p&gt;</content>
   </entry>
 </feed>
