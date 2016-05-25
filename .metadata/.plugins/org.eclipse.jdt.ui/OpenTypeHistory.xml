@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=shop/D:\/JAVA\/jdk1.8.0_92\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1461582976321"/>
-<typeInfo handle="=shop/src&lt;info.dao{IAddressDao.java[IAddressDao" modifiers="513" timestamp="1464001902467"/>
-<typeInfo handle="=shop/src&lt;info.dao{IUserDao.java[IUserDao" modifiers="513" timestamp="1464001863236"/>
+<typeInfo handle="=shop02/src&lt;info.dao{IAddressDao.java[IAddressDao" modifiers="513" timestamp="1464001902467"/>
+<typeInfo handle="=shop02/src&lt;info.dao{IUserDao.java[IUserDao" modifiers="513" timestamp="1464001863236"/>
 </typeInfoHistroy>

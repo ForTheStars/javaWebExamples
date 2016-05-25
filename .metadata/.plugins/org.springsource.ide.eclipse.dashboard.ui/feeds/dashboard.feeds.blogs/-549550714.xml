@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-05-25T01:25:00Z</updated>
+  <updated>2016-05-25T13:07:37Z</updated>
+  <entry>
+    <title>Spring REST Docs 1.0.2.RELEASE</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/05/25/spring-rest-docs-1-0-2-release" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2016-05-25:2508</id>
+    <updated>2016-05-25T13:07:37Z</updated>
+    <content type="html">&lt;p&gt;I&amp;rsquo;m delighted to announce that &lt;a href="https://github.com/spring-projects/spring-restdocs"&gt;Spring REST Docs&lt;/a&gt; 1.0.2.RELEASE is available from Maven Central, JCenter, and our &lt;a href="https://repo.spring.io/release"&gt;release repository&lt;/a&gt;. My thanks to everyone who contributed to this release by reporting bugs and opening pull requests.&lt;/p&gt;
+&lt;p&gt;This maintenance release includes a &lt;a href="https://github.com/spring-projects/spring-restdocs/issues?q=milestone%3A1.0.2.RELEASE"&gt;number of bug fixes&lt;/a&gt; and an immediate upgrade is recommended for all Spring REST Docs users. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-restdocs"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-restdocs"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-restdocs/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-restdocs/docs/1.0.2.RELEASE"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - May 24th, 2016</title>
     <link rel="alternate" href="https://spring.io/blog/2016/05/25/this-week-in-spring-may-24th-2016" />
@@ -656,218 +669,5 @@ public static class MyService {&#xD;
   &lt;li&gt;I loved this post on &lt;a href="https://www.javacodegeeks.com/2016/05/laziness-extreme-developing-jax-rs-services-spring-boot.html"&gt;using CXF to develop JAX-RS services on top of Spring Boot&lt;/a&gt;. (It would&amp;rsquo;ve been even easier if they&amp;rsquo;d just used Jersey!)&lt;/li&gt;
   &lt;li&gt;Want to get a local Cloud Foundry environment? &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/products/meet-pcf-dev-your-ticket-to-running-cloud-foundry-locally"&gt;Meet PCF Dev: Your Ticket To Running Cloud Foundry Locally&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>What's new in Spring Data Hopper?</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/05/03/what-s-new-in-spring-data-hopper" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Christoph Strobl</name>
-    </author>
-    <id>tag:spring.io,2016-03-17:2430</id>
-    <updated>2016-05-03T09:36:00Z</updated>
-    <content type="html">&lt;p&gt;As we&amp;rsquo;ve just &lt;a href="https://spring.io/blog/2016/04/07/spring-data-release-train-hopper-goes-ga-and-sr1"&gt;shipped the GA release&lt;/a&gt; of Spring Data release train &lt;a href="https://en.wikipedia.org/wiki/Grace_Hopper"&gt;Hopper&lt;/a&gt;, let&amp;rsquo;s take a deeper look at the changes and features that come with the 13 modules on the train. A very fundamental change in the release train&amp;rsquo;s dependencies is the upgrade to Spring Framework 4.2 (currently 4.2.5) as baseline. This is in preparation for the upcoming 4.3 release of the framework. We also took the chance to upgrade our Querydsl integration to 4.x (currently 4.1) which required some breaking changes in very core abstractions. Besides that, Hopper contains quite a few significant major version changes its modules.&lt;/p&gt;
-&lt;p&gt;Those upgrades are mostly driven by major version bumps of the underlying store drivers and implementations that need to be reflected in potential breaking changes to the API exposed by those modules. Some of those modules — like Spring Data Neo4j and Spring Data Couchbase — have already seen a new major release outside the release train and are now re-integrated into it.&lt;/p&gt;
-&lt;p&gt;Please welcome (back):&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Data Couchbase 2.1 based on Couchbase 2.2&lt;/li&gt;
-  &lt;li&gt;Spring Data Elasticsearch 2.0 based on Elasticsearch 2.2&lt;/li&gt;
-  &lt;li&gt;Spring Data Neo4j 4.1 based on Neo4J OGM 2.0&lt;/li&gt;
-  &lt;li&gt;Spring Data Solr 2.0 based on Solr 5.5&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Besides those upgrades the team has been working on a whole bunch of new features.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Composable annotations making use of &lt;code&gt;@AliasFor&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Query By Example&lt;/li&gt;
-  &lt;li&gt;Projections for repository query methods&lt;/li&gt;
-  &lt;li&gt;Redis cluster and repository support&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$lookup&lt;/code&gt; aggregation and bulk operations for MongoDB&lt;/li&gt;
-  &lt;li&gt;Synchronized cache lookup when using Spring 4.3 in Gemfire and Redis&lt;/li&gt;
-  &lt;li&gt;Querydsl 4 support&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I&amp;rsquo;d like to spend the rest of the blog post casting a bit more light on some of those features to give you a more detailed overview about them.&lt;/p&gt;&lt;h2&gt;&lt;a href="#query-by-example" class="anchor" name="query-by-example"&gt;&lt;/a&gt;Query By Example&lt;/h2&gt;
-&lt;p&gt;The Spring Data repository abstraction has allowed execution of query methods and flexible predicates via Querydsl for quite a while. That said, it has been a long requested feature to be able to provide a partially set up domain type instance as probe to the repository to return all entities that match that particular probe. Hopper introduces general support for this query-by-example mechanism in Spring Data Commons as well as implementations of the API in the JPA and MongoDB modules (more to come).&lt;/p&gt;
-&lt;p&gt;The query-by-example API consists of four fundamental parts:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;A probe instance which is an instance of the domain model with fields only partially populated.&lt;/li&gt;
-  &lt;li&gt;An optional &lt;code&gt;ExampleMatcher&lt;/code&gt; which carries details and strategies on how to match particular fields, &lt;code&gt;null&lt;/code&gt;-values, &lt;code&gt;String&lt;/code&gt;s in general etc.&lt;/li&gt;
-  &lt;li&gt;An &lt;code&gt;Example&lt;/code&gt;, which consists of the probe and the &lt;code&gt;ExampleMatcher&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;The &lt;code&gt;QueryByExampleExecutor&lt;/code&gt; interface which your repository would additionally implement and which provides methods taking &lt;code&gt;Example&lt;/code&gt;s similarly to the &lt;code&gt;QueryDslPredicateExecutor&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In the most trivial case it is enough to set the values you want to query for on the domain type and hand that example to the repository.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;interface PersonRepository extends CrudRepository&amp;lt;Person, Long&amp;gt;,&#xD;
-  QueryByExampleExecutor&amp;lt;Person&amp;gt; { … }&#xD;
-&#xD;
-Example&amp;lt;Person&amp;gt; example = Example.of(new Person(&amp;quot;Jon&amp;quot;, &amp;quot;Snow&amp;quot;));&#xD;
-Iterable&amp;lt;Person&amp;gt; result = repository.findAll(example);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;By default, given value are matched as-is, &lt;code&gt;null&lt;/code&gt;-values get ignored during query creation. You can get more control over the matching process by providing an &lt;code&gt;ExampleMatcher&lt;/code&gt; to customize the handling in general or for individual fields.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;ExampleMatcher exampleSpec = new ExampleMatcher()&#xD;
-  .withMatcher(&amp;quot;firstname&amp;quot;, endsWith())&#xD;
-  .withMatcher(&amp;quot;lastname&amp;quot;, startsWith().ignoreCase());
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The above spec creates for eg. JPA in the above sample predicates &lt;code&gt;like(firstname, &amp;quot;%Jon&amp;quot;)&lt;/code&gt; and &lt;code&gt;like(lower(expression), &amp;quot;snow%&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;There are more options available. So please have a look at the reference documentation for Spring Data &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.10.x/reference/html/#query-by-example"&gt;JPA&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.9.x/reference/html/#query-by-example"&gt;MongoDB&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#projections-on-repository-query-methods" class="anchor" name="projections-on-repository-query-methods"&gt;&lt;/a&gt;Projections on repository query methods&lt;/h2&gt;
-&lt;p&gt;The concept of projections Spring Data REST shipped a feature called projections with the &lt;a href="https://spring.io/blog/2014/09/09/spring-data-release-train-evans-goes-ga"&gt;Evans release&lt;/a&gt; train. With Hopper we added support to JPA and MongoDB query methods to use projections on the repository level. A projection is a customized view of your domain model, in this case, returned from a query method.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Entity&#xD;
-public class Person {&#xD;
-&#xD;
-  @Id @GeneratedValue&#xD;
-  private Long id;&#xD;
-  private String firstName, lastName;&#xD;
-&#xD;
-  @OneToOne&#xD;
-  private Address address;&#xD;
-}&#xD;
-&#xD;
-@Entity&#xD;
-public class Address {&#xD;
-&#xD;
-  @Id @GeneratedValue&#xD;
-  private Long id;&#xD;
-  private String street, state, country;&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Limiting data exposure for &lt;code&gt;Person&lt;/code&gt; to &lt;code&gt;firstName&lt;/code&gt; and &lt;code&gt;lastName&lt;/code&gt; require an dedicated DTO class. Using projections you simply define an interface with the properties (getter methods) you want to expose and use the projection interface as return type of your query method:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;interface NoAddresses {&#xD;
-&#xD;
-  String getFirstName();&#xD;
-&#xD;
-  String getLastName();&#xD;
-}&#xD;
-&#xD;
-interface PersonRepository extends CrudRepository&amp;lt;Person, Long&amp;gt; {&#xD;
-  NoAddresses findByFirstName(String firstName);&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Projections are a powerful pattern constructing adjusted views from existing models. &lt;code&gt;NoAddresses&lt;/code&gt; is a closed projection as it doesn&amp;rsquo;t contain any methods dynamically calculating values (see more on that below). Closed projections allow us to optimize the query execution as only exposed properties are queried from the data store. So in the above case the query actually executed would be semantically equivalent to &lt;code&gt;select u.firstName, u.lastName from User u where u.firstName = ?1&lt;/code&gt;. The returned tuples are then wrapped into a proxy that returns the values corresponding to accessors declared.&lt;/p&gt;
-&lt;p&gt;However, projections can also be used for enriching a data model. You can annotate exposed properties with &lt;code&gt;@Value&lt;/code&gt; using SpEL expressions to expose synthetic properties.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;interface FullNameAndCountry {&#xD;
-&#xD;
-  String getFirstName();&#xD;
-&#xD;
-  String getLastName();&#xD;
-&#xD;
-  @Value(&amp;quot;#{target.firstName} #{target.lastName}&amp;quot;)&#xD;
-  String getFullName();&#xD;
-&#xD;
-  @Value(&amp;quot;#{target.address.country}&amp;quot;)&#xD;
-  String getCountry();&#xD;
-&#xD;
-  @Value(&amp;quot;#{@mybean.someMethod(target)}&amp;quot;)&#xD;
-  String getSomeCalculatedValue()&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note, how we can make use of properties of the target instance, traverse nested properties not even exposed at the top level or even invoke methods on other Spring beans and hand over the target to it for use in advanced calculations. In this case, no query optimizations are applied as the proxy created for that interface will require access to the original target instance.&lt;/p&gt;
-&lt;p&gt;Please refer to the &lt;a href="http://docs.spring.io/spring-data/jpa/docs/1.10.1.RELEASE/reference/html/#projections"&gt;Spring Data JPA&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-data/mongodb/docs/1.9.1.RELEASE/reference/html/#projections"&gt;Spring Data MongoDB&lt;/a&gt; reference documentation for more details in depth how to use projections with query methods.&lt;/p&gt;&lt;h2&gt;&lt;a href="#redis-cluster" class="anchor" name="redis-cluster"&gt;&lt;/a&gt;Redis Cluster&lt;/h2&gt;
-&lt;p&gt;Support for Redis Cluster provides a high level API on top of the existing Redis drivers having cluster features. Cluster support is based on the very same building blocks as non-clustered communication. &lt;code&gt;RedisClusterConnection&lt;/code&gt; — an extension to &lt;code&gt;RedisConnection&lt;/code&gt; — handles the communication with the Redis Cluster and translates errors into Spring&amp;rsquo;s &lt;code&gt;DataAccessException&lt;/code&gt; hierarchy. You see there&amp;rsquo;s no big difference to what you are already used to when working with Spring Data Redis.&lt;/p&gt;
-&lt;p&gt;Redis Cluster behaves different from single node Redis or even a Sentinel monitored master slave environment. This is caused by the automatic sharding that maps a key to one of 16384 slots which are distributed across the nodes. Therefore, commands that involve more than one key must assert that all keys map to the exact same slot in order to avoid cross slot execution errors.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;RedisClusterConnection&lt;/code&gt; offers both an API to talk to a single slot or node but retains expected behavior when interacting with the cluster. It takes care of executing commands that involve more than one key, slot or cluster node and therefore connects to the required nodes and collects results so that eg the &lt;code&gt;KEYS&lt;/code&gt; command not only returns the matching keys of one single node but the cumulated list of all matching keys within the cluster.&lt;/p&gt;
-&lt;p&gt;More information and a complete sample how to setup Spring Data Redis to work with a cluster can be found in the &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/master/redis/cluster"&gt;Redis Cluster module&lt;/a&gt; of the Spring Data Examples GitHub repository as well as the &lt;a href="http://docs.spring.io/spring-data/redis/docs/current/reference/html/#cluster"&gt;reference documentation&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#redis-repositories" class="anchor" name="redis-repositories"&gt;&lt;/a&gt;Redis Repositories&lt;/h2&gt;
-&lt;p&gt;With Redis repositories, Hopper ships an implementation of the Spring Data repositories abstraction on top of Redis so that you can execute basic CRUD operations and execute derived query methods. It allows you to seamlessly convert and store domain objects into Redis Hashes, apply custom mapping strategies and make use of secondary indexes. Let&amp;rsquo;s have a look at an example domain type, a repository and the necessary Spring configuration to get Redis repositories bootstrapped.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@RedisHash(&amp;quot;persons&amp;quot;)&#xD;
-class Person {&#xD;
-&#xD;
-  @Id String id;&#xD;
-  String firstname;&#xD;
-  @Indexed String lastname;&#xD;
-  Address address;&#xD;
-}&#xD;
-&#xD;
-interface PersonRepository extends CrudRepository&amp;lt;Person, String&amp;gt; {&#xD;
-  List&amp;lt;Person&amp;gt; findByLastname(String lastname);&#xD;
-}&#xD;
-&#xD;
-@Configuration&#xD;
-@EnableRedisRepositories&#xD;
-class ApplicationConfig {&#xD;
-&#xD;
-  @Bean&#xD;
-  RedisConnectionFactory connectionFactory() {&#xD;
-    return new JedisConnectionFactory();&#xD;
-  }&#xD;
-&#xD;
-  @Bean&#xD;
-  RedisTemplate&amp;lt;?, ?&amp;gt; redisTemplate() {&#xD;
-    return new RedisTemplate&amp;lt;byte[], byte[]&amp;gt;(connectionFactory());&#xD;
-  }&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note that the &lt;code&gt;@Indexed&lt;/code&gt; annotation used on &lt;code&gt;firstname&lt;/code&gt; allows the usage of the property within the derived query method. This also works on nested or embedded objects. For more information about custom Object mapping strategies, expiration times and listeners as well as storing object references please refer to the &lt;a href="http://docs.spring.io/spring-data/redis/docs/1.7.x/reference/html/#redis.repositories"&gt;Spring Data Redis reference documentation&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#spring-data-rest" class="anchor" name="spring-data-rest"&gt;&lt;/a&gt;Spring Data REST&lt;/h2&gt;
-&lt;p&gt;A common request for Spring Data REST was to use the value of a unique property of an aggregate to make up the URI for the item resource exposed. Imagine a very simple entity &lt;code&gt;Country&lt;/code&gt; for which you&amp;rsquo;d like to its unique name in the URI.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Entity&#xD;
-class Country {&#xD;
-&#xD;
-  @Id @GeneratedValue&#xD;
-  private Long id;&#xD;
-  private String name;&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To make this work, Spring Data REST&amp;rsquo;s &lt;code&gt;RepositoryRestConfiguration&lt;/code&gt; now allows to customize the entity lookup via dedicated API. Using a different property for the URI requires to define two things actually: the property to use and a query method on the repository to map a value of that property back to an instance of it. If you&amp;rsquo;re using Java 8, the registration looks as simple as this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Component&#xD;
-public class SpringDataRestCustomization extends RepositoryRestConfigurerAdapter {&#xD;
-&#xD;
-  @Override&#xD;
-  public void configureRepositoryRestConfiguration(&#xD;
-    RepositoryRestConfiguration config) {&#xD;
-&#xD;
-    config.withCustomEntityLookup().&#xD;
-      forRepository(CountryRepository.class,&#xD;
-        Country::getName, CountryRepository::findByName);&#xD;
-  }&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;As you can see we use method handles here to define both the mapping step back and forth to be picked up by the infrastructure. Of course, there&amp;rsquo;s an alternative overload for the method shown here to work on Java 6 as well. For details on this, make sure you check out the &lt;a href="https://github.com/spring-projects/spring-data-examples/tree/master/rest/uri-customization"&gt;example dedicated to this on GitHub&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#lookup-types" class="anchor" name="lookup-types"&gt;&lt;/a&gt;Lookup types&lt;/h3&gt;
-&lt;p&gt;Very often, domain models contain types that are value objects but actually represent a particular value out of a dedicated set of possible values. The &lt;code&gt;Country&lt;/code&gt; class of the example above actually falls into that category. Because we need to manage the super set of values, there&amp;rsquo;s a repository in place. If it should be allowed to manage the set via REST as well, the repository needs to be exported, too. As repositories usually indicate an aggregate being managed, Spring Data REST&amp;rsquo;s default way of handling that scenario would be to render links to an association resource wherever a &lt;code&gt;Country&lt;/code&gt; instance is encountered. The Hopper release train adds means to declare so called lookup types, for which Spring Data REST then renders an individual property inlined in the representation and also registers the according Jackson Deserializer to make sure that that property value gets translated back into an instance of that value type for &lt;code&gt;PUT&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt; requests.&lt;/p&gt;
-&lt;p&gt;Assume the original representation of a resource containing a &lt;code&gt;Country&lt;/code&gt; instance:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint json"&gt;{&#xD;
-  &amp;quot;zipCode&amp;quot; : &amp;quot;…&amp;quot;,&#xD;
-  &amp;quot;_links&amp;quot; {&#xD;
-    &amp;quot;country&amp;quot; : { &amp;quot;href&amp;quot; : &amp;quot;…&amp;quot; }&#xD;
-  }&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you now go ahead and register &lt;code&gt;Country&lt;/code&gt; as lookup type like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Component&#xD;
-public class SpringDataRestCustomization extends RepositoryRestConfigurerAdapter {&#xD;
-&#xD;
-  @Override&#xD;
-  public void configureRepositoryRestConfiguration(&#xD;
-    RepositoryRestConfiguration config) {&#xD;
-&#xD;
-    config.withCustomEntityLookup().&#xD;
-      forLookupRepository(CountryRepository.class).&#xD;
-      withIdMapping(Country::getName).&#xD;
-      withLookup(CountryRepository::findByName);&#xD;
-  }&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;the representation will change to this but still maintain entity semantics in the model:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint json"&gt;{&#xD;
-  &amp;quot;zipCode&amp;quot; : &amp;quot;…&amp;quot;,&#xD;
-  &amp;quot;country&amp;quot; : &amp;quot;Germany&amp;quot;&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href="#composable-annotations" class="anchor" name="composable-annotations"&gt;&lt;/a&gt;Composable annotations&lt;/h2&gt;
-&lt;p&gt;The upgrade to Spring 4.2 as framework baseline allows us to provide enhanced options of composing your own annotations. We added the base infrastructure to the Spring Data Commons module and tweaked the implementations for JPA, MongoDB and Redis to allow you to make use of those changes.&lt;/p&gt;
-&lt;p&gt;Assume you&amp;rsquo;re using the Spring Data JPA annotations &lt;code&gt;@Modifying&lt;/code&gt; and &lt;code&gt;@Query&lt;/code&gt; together in a lot of places like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Modifying&#xD;
-@Query(&amp;quot;update #{#entityName} u set u.active = ?1 where u.id in ?2&amp;quot;)&#xD;
-void updateUserActiveState(boolean activeState, Integer... ids);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Modifying&#xD;
-@Query&#xD;
-@Retention(RetentionPolicy.RUNTIME)&#xD;
-public @interface ModifyingQuery {&#xD;
-&#xD;
-  @AliasFor(annotation = Query.class, attribute = &amp;quot;value&amp;quot;)&#xD;
-  public String query();&#xD;
-}&#xD;
-&#xD;
-@ModifyingQuery(query =&#xD;
-  &amp;quot;update #{#entityName} u set u.active = ?1 where u.id in ?2&amp;quot;)&#xD;
-void updateUserActiveState(boolean activeState, Integer... ids);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Or just have a little fun and translate existing annotations into your &lt;a href="https://github.com/sbrannen/spring-polyglot"&gt;favorite language&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The Spring Data team is coming to Las Vegas! Be sure to join us for a lot of sessions on Spring Data at this year&amp;rsquo;s SpringOne Platform. The first batch of featured talks has already been &lt;a href="http://springoneplatform.io/sessions"&gt;published&lt;/a&gt; on the event&amp;rsquo;s website. Be sure to &lt;a href="https://2016.event.springoneplatform.io/register"&gt;register&lt;/a&gt; to learn about the latest and greatest in Spring Data, the Spring Framework ecosystem in general as well as everything related to CloudFoundry.&lt;/p&gt;</content>
   </entry>
 </feed>
