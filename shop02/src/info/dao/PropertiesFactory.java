@@ -5,14 +5,13 @@ import java.util.Map;
 import java.util.Properties;
 
 import info.util.PropertiesUtil;
-import jdk.internal.dynalink.beans.StaticClass;
 
-public class PropertiesFactory implements IFactoryDao{
-	private static PropertiesFactory factory  = new PropertiesFactory();
-	private static Map<String, Object> daos = new HashMap<>();
-	private PropertiesFactory(){};
-	public static IFactoryDao getInstance(){
-		return factory;
+public class PropertiesFactory implements IFactoryDao {
+	private static PropertiesFactory f = new PropertiesFactory();
+	private static Map<String,Object> daos = new HashMap<String, Object>();
+	private PropertiesFactory() {	}
+	public static IFactoryDao getInstance() {
+		return f;
 	}
 	@Override
 	public Object getDao(String name) {
@@ -20,11 +19,11 @@ public class PropertiesFactory implements IFactoryDao{
 			if(daos.containsKey(name)){
 				return daos.get(name);
 			}
-			Properties properties = PropertiesUtil.getDaoProp();
-			String cn = properties.getProperty(name);
-			Object object = Class.forName(cn).newInstance();
-			daos.put(name, object);
-			return object;
+			Properties prop = PropertiesUtil.getDaoProp();
+			String cn = prop.getProperty(name);
+			Object obj = Class.forName(cn).newInstance();
+			daos.put(name, obj);
+			return obj;
 		} catch (InstantiationException e) {
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
@@ -34,5 +33,5 @@ public class PropertiesFactory implements IFactoryDao{
 		}
 		return null;
 	}
-	
+
 }

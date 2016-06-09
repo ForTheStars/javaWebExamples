@@ -14,116 +14,117 @@ import info.util.DBUtil;
 
 public class UserJDBCDao implements IUserDao {
 	
-	private User loadOnceUser(int id){
-		Connection connection = null;
-		PreparedStatement pStatement = null;
-		ResultSet resultSet = null;
-		List<Address> addresses = new ArrayList<>();
-		Address address = null;
-		User user = null;
+	private User loadOnceUser(int id) {
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		List<Address> as = new ArrayList<Address>();
+		Address a = null;
+		User u = null;
 		try {
-			connection = DBUtil.getConnection();
+			con = DBUtil.getConnection();
 			String sql = "select *,t2.id as 'a_id' " +
 					"from t_user t1 left join t_address t2 on(t1.id=t2.user_id) where t1.id=?";
-			pStatement = connection.prepareStatement(sql);
-			pStatement.setInt(1, id);
-			resultSet = pStatement.executeQuery();
-			while(resultSet.next()){
-				if(user == null){
-					user = new User();
-					user.setId(resultSet.getInt("user_id"));
-					user.setNickname(resultSet.getString("nickname"));
-					user.setPassword(resultSet.getString("password"));
-					user.setType(resultSet.getInt("type"));
-					user.setUsername(resultSet.getString("username"));
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				if(u==null) {
+					u = new User();
+					u.setId(rs.getInt("user_id"));
+					u.setNickname(rs.getString("nickname"));
+					u.setPassword(rs.getString("password"));
+					u.setType(rs.getInt("type"));
+					u.setUsername(rs.getString("username"));
 				}
-				address = new Address();
-				address.setId(resultSet.getInt("a_id"));
-				address.setName(resultSet.getString("name"));
-				address.setPhone(resultSet.getString("phone"));
-				address.setPostcode(resultSet.getString("postcode"));
-				addresses.add(address);
+				a = new Address();
+				a.setId(rs.getInt("a_id"));
+				a.setName(rs.getString("name"));
+				a.setPhone(rs.getString("phone"));
+				a.setPostcode(rs.getString("postcode"));
+				as.add(a);
 			}
-			user.setAddresses(addresses);
+			u.setAddresses(as);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally{
-			DBUtil.close(resultSet);
-			DBUtil.close(pStatement);
-			DBUtil.close(connection);
+		} finally {
+			DBUtil.close(rs);
+			DBUtil.close(ps);
+			DBUtil.close(con);
 		}
-		return user;
+		return u;
 	}
 	
-	private User loadSecondUser(int id){
-		Connection connection = null;
-		PreparedStatement pStatement = null;
-		ResultSet resultSet = null;
-		List<Address> addresses = new ArrayList<>();
-		Address address = null;
-		User user = null;
+	private User loadSecondUser(int id) {
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		List<Address> as = new ArrayList<Address>();
+		Address a = null;
+		User u = null;
 		try {
-			connection = DBUtil.getConnection();
+			con = DBUtil.getConnection();
 			String sql = "select * from t_user where id=?";
-			pStatement = connection.prepareStatement(sql);
-			pStatement.setInt(1, id);
-			resultSet = pStatement.executeQuery();
-			while(resultSet.next()){
-				user = new User();
-				user.setId(resultSet.getInt("user_id"));
-				user.setNickname(resultSet.getString("nickname"));
-				user.setPassword(resultSet.getString("password"));
-				user.setType(resultSet.getInt("type"));
-				user.setUsername(resultSet.getString("username"));
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				u = new User();
+				u.setId(rs.getInt("id"));
+				u.setNickname(rs.getString("nickname"));
+				u.setPassword(rs.getString("password"));
+				u.setType(rs.getInt("type"));
+				u.setUsername(rs.getString("username"));
 			}
 			sql = "select * from t_address where user_id=?";
-			pStatement = connection.prepareStatement(sql);
-			pStatement.setInt(1, id);
-			resultSet = pStatement.executeQuery();
-			while(resultSet.next()){
-				address = new Address();
-				address.setId(resultSet.getInt("a_id"));
-				address.setName(resultSet.getString("name"));
-				address.setPhone(resultSet.getString("phone"));
-				address.setPostcode(resultSet.getString("postcode"));
-				addresses.add(address);
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				a = new Address();
+				a.setId(rs.getInt("id"));
+				a.setName(rs.getString("name"));
+				a.setPhone(rs.getString("phone"));
+				a.setPostcode(rs.getString("postcode"));
+				as.add(a);
 			}
-			user.setAddresses(addresses);
+			u.setAddresses(as);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally{
-			DBUtil.close(resultSet);
-			DBUtil.close(pStatement);
-			DBUtil.close(connection);
+		} finally {
+			DBUtil.close(rs);
+			DBUtil.close(ps);
+			DBUtil.close(con);
 		}
-		return user;
+		return u;
 	}
+
+	@Override
+	public User load(int id) {
+		System.out.println("jdbc");
+		return loadSecondUser(id);
+	}
+
 	@Override
 	public void add(User user) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
-	public void delect(int id) {
+	public void delete(int id) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	public void update(User user) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	public User loadByUsername(String username) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public User load(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -3,11 +3,29 @@ package info.model;
 import java.util.List;
 
 public class Pager<E> {
-	private int pageIndex; // 第几页
-	private int pageSize; // 每页显示多少条
-	private int pageOffset; // 分页的开始值
-	private int totalRecord; //总共多少条记录
-	private int totalPage; //总共多少页
+	/**
+	 * 第几页
+	 */
+	private int pageIndex;
+	/**
+	 * 每页显示多少条
+	 */
+	private int pageSize;
+	/**
+	 * 分页的开始值
+	 */
+	private int pageOffset;
+	/**
+	 * 总共多少条记录
+	 */
+	private int totalRecord;
+	/**
+	 * 总共多少页
+	 */
+	private int totalPage;
+	/**
+	 * 放置具体数据的列表
+	 */
 	private List<E> datas;
 	
 	public int getPageIndex() {
@@ -21,12 +39,6 @@ public class Pager<E> {
 	}
 	public void setPageSize(int pageSize) {
 		this.pageSize = pageSize;
-	}
-	public int getPageOffset() {
-		return pageOffset;
-	}
-	public void setPageOffset(int pageOffset) {
-		this.pageOffset = pageOffset;
 	}
 	public int getTotalRecord() {
 		return totalRecord;
@@ -45,6 +57,12 @@ public class Pager<E> {
 	}
 	public void setDatas(List<E> datas) {
 		this.datas = datas;
+	}
+	public int getPageOffset() {
+		return pageOffset;
+	}
+	public void setPageOffset(int pageOffset) {
+		this.pageOffset = pageOffset;
 	}
 	
 	

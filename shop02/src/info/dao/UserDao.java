@@ -7,21 +7,20 @@ import info.model.Pager;
 import info.model.ShopException;
 import info.model.User;
 
+
 public class UserDao extends BaseDao<User> implements IUserDao {
 
 	@Override
 	public void add(User user) {
-		User tUser =this.loadByUsername(user.getUsername());
-		if(tUser != null)
-			throw new ShopException("要添加的用户已经存在");
+		User tu = this.loadByUsername(user.getUsername());
+		if(tu!=null) throw new ShopException("要添加的用户已经存在");
 		super.add(user);
 	}
 
 	@Override
-	public void delect(int id) {
-		// TODO 需要删除关联对象
+	public void delete(int id) {
+		//TODO 需要先删除关联对象
 		super.delete(User.class, id);
-
 	}
 
 	@Override
@@ -41,8 +40,8 @@ public class UserDao extends BaseDao<User> implements IUserDao {
 
 	@Override
 	public Pager<User> find(String name) {
-		Map<String, Object> params = new HashMap<String, Object>();
-		if(name != null && !name.equals(""))
+		Map<String,Object> params = new HashMap<String, Object>();
+		if(name!=null&&!name.equals(""))
 			params.put("name", "%"+name+"%");
 		return super.find(User.class, params);
 	}

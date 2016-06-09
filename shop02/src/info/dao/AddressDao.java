@@ -5,22 +5,27 @@ import java.util.List;
 import java.util.Map;
 
 import info.model.Address;
+import info.model.ShopDi;
 import info.model.ShopException;
 import info.model.User;
 
 public class AddressDao extends BaseDao<Address> implements IAddressDao {
 	private IUserDao userDao;
+	
+	public IUserDao getUserDao() {
+		return userDao;
+	}
 
-	public AddressDao() {
-		userDao = DAOFactory.getUserDao();
+	@ShopDi("userDao")
+	public void setUserDao(IUserDao userDao) {
+		this.userDao = userDao;
 	}
 
 	@Override
 	public void add(Address address, int userId) {
-		User user = userDao.load(userId);
-		if(user == null)
-				throw new ShopException("添加的地址用户不存在");
-		address.setUser(user);
+		User u = userDao.load(userId);
+		if(u==null) throw new ShopException("添加地址的用户不存在");
+		address.setUser(u);
 		super.add(address);
 	}
 
@@ -35,15 +40,14 @@ public class AddressDao extends BaseDao<Address> implements IAddressDao {
 	}
 
 	@Override
-	public Address load(int id) {
-		return super.load(Address.class, id);
-	}
-
-	@Override
 	public List<Address> list(int userId) {
-		Map<String, Object> params = new HashMap<String, Object>();
+		Map<String,Object> params = new HashMap<String, Object>();
 		params.put("userId", userId);
 		return super.list(Address.class, params);
 	}
-
+	@Override
+	public Address load(int id) {
+		return super.load(Address.class, id);
+	}
+	
 }

@@ -1,9 +1,13 @@
 package info.model;
 
 public class SystemContext {
-	private static ThreadLocal<Integer> pageSize = new ThreadLocal<>();
-	private static ThreadLocal<Integer> pageIndex = new ThreadLocal<>();
+	private static ThreadLocal<Integer> pageSize = new ThreadLocal<Integer>();
+	private static ThreadLocal<Integer> pageIndex = new ThreadLocal<Integer>();
 	private static ThreadLocal<Integer> pageOffset = new ThreadLocal<Integer>();
+	/**
+	 * 真实路径
+	 */
+	private static ThreadLocal<String> realpath = new ThreadLocal<String>();
 	/**
 	 * 升序还是降序
 	 */
@@ -14,6 +18,18 @@ public class SystemContext {
 	private static ThreadLocal<String> sort = new ThreadLocal<String>();
 	
 	
+	public static String getRealpath() {
+		return realpath.get();
+	}
+
+	public static void setRealpath(String _realpath) {
+		realpath.set(_realpath);
+	}
+	
+	public static void removeRealPath() {
+		realpath.remove();
+	}
+
 	public static String getOrder() {
 		return order.get();
 	}

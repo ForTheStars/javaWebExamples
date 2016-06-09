@@ -7,13 +7,11 @@ public class UserOracleDao implements IUserDao {
 
 	@Override
 	public void add(User user) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void delect(int id) {
-		// TODO Auto-generated method stub
+	public void delete(int id) {
 
 	}
 

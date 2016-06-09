@@ -1,21 +1,42 @@
 package info.dao;
 
-import info.model.Pager;
-import info.model.SystemContext;
-import info.util.MyBatisUtil;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
+import info.model.Pager;
+import info.model.SystemContext;
+import info.util.DaoUtil;
+import info.util.MyBatisUtil;
+
 public class BaseDao<T> {
+	
+	public BaseDao() {
+		DaoUtil.diDao(this);
+	}
+	
+	
 	public void add(T obj) {
 		SqlSession session = null;
 		try {
 			session = MyBatisUtil.createSession();
 			session.insert(obj.getClass().getName()+".add",obj);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			session.rollback();
+		} finally {
+			MyBatisUtil.closeSession(session);
+		}
+	}
+	
+	public void add(String sqlId,Object obj) {
+		SqlSession session = null;
+		try {
+			session = MyBatisUtil.createSession();
+			session.insert(sqlId,obj);
 			session.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -44,6 +65,20 @@ public class BaseDao<T> {
 		try {
 			session = MyBatisUtil.createSession();
 			session.delete(clz.getName()+".delete", id);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			session.rollback();
+		} finally {
+			MyBatisUtil.closeSession(session);
+		}
+	}
+	
+	public void delete(String sqlId,Map<String,Object> params) {
+		SqlSession session = null;
+		try {
+			session = MyBatisUtil.createSession();
+			session.delete(sqlId,params);
 			session.commit();
 		} catch (Exception e) {
 			e.printStackTrace();

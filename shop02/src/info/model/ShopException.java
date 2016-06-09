@@ -2,14 +2,10 @@ package info.model;
 
 public class ShopException extends RuntimeException {
 
-	private static final long serialVersionUID = -4986168271994917994L;
+	private static final long serialVersionUID = 1465191015391787906L;
 
 	public ShopException() {
 		super();
-	}
-
-	public ShopException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-		super(message, cause, enableSuppression, writableStackTrace);
 	}
 
 	public ShopException(String message, Throwable cause) {

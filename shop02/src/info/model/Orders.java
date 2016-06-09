@@ -8,11 +8,24 @@ public class Orders {
 	private Date buyDate;
 	private Date payDate;
 	private Date confirmDate;
+	/**
+	 * 四种状态:1表示已下订单、2表示已付款、3、表示已发货、4、表示确认收货
+	 */
 	private int status;
 	private User user;
 	private Address address;
-	private List<Goods> goods;
+	private List<CartProduct> products;
+	/**
+	 * 所花费的价格，这个价格是可以修改的
+	 */
+	private double price;
 	
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
 	public int getId() {
 		return id;
 	}
@@ -37,9 +50,17 @@ public class Orders {
 	public void setConfirmDate(Date confirmDate) {
 		this.confirmDate = confirmDate;
 	}
+	/**
+	 * 
+	 * @return 四种状态:1表示已下订单、2表示已付款、3、表示已发货、4、表示确认收货
+	 */
 	public int getStatus() {
 		return status;
 	}
+	/**
+	 * 
+	 * @param status 四种状态:1表示已下订单、2表示已付款、3、表示已发货、4、表示确认收货
+	 */
 	public void setStatus(int status) {
 		this.status = status;
 	}
@@ -55,11 +76,10 @@ public class Orders {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	public List<Goods> getGoods() {
-		return goods;
+	public List<CartProduct> getProducts() {
+		return products;
 	}
-	public void setGoods(List<Goods> goods) {
-		this.goods = goods;
+	public void setProducts(List<CartProduct> products) {
+		this.products = products;
 	}
-	
 }

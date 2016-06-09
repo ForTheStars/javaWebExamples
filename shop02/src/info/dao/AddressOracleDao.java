@@ -8,7 +8,6 @@ public class AddressOracleDao implements IAddressDao {
 
 	@Override
 	public void add(Address address, int userId) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -20,7 +19,6 @@ public class AddressOracleDao implements IAddressDao {
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
 
 	}
 

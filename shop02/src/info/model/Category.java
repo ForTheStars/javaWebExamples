@@ -2,6 +2,7 @@ package info.model;
 
 public class Category {
 	private int id;
+	@ValidateForm(type=ValidateType.NotNull,errorMsg="类别名称不能为空 ")
 	private String name;
 	
 	public int getId() {
@@ -16,5 +17,4 @@ public class Category {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 }

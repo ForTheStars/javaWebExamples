@@ -11,7 +11,6 @@ import org.junit.Test;
 public class TestAddressDao {
 	private IAddressDao addressDao = DAOFactory.getAddressDao();
 	
-	
 	@Test
 	public void testLoad() {
 		Address address = addressDao.load(2);
