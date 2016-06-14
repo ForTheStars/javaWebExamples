@@ -24,7 +24,7 @@ public class DaoUtil {
 						mn = mn.substring(0, 1).toLowerCase()+mn.substring(1);
 					}
 					Object o = DaoUtil.createDaoFactory().getDao(mn);
-					m.invoke(obj, o);
+					m.invoke(obj,o);
 				}
 			}
 		} catch (SecurityException e) {

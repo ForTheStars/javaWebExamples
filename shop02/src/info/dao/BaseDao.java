@@ -16,8 +16,7 @@ public class BaseDao<T> {
 	public BaseDao() {
 		DaoUtil.diDao(this);
 	}
-	
-	
+		
 	public void add(T obj) {
 		SqlSession session = null;
 		try {

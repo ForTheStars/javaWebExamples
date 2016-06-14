@@ -21,5 +21,9 @@
 	<mappers>
 		<mapper resource="info/model/User.xml"/>
 		<mapper resource="info/model/Address.xml"/>
+		<mapper resource="info/model/Category.xml"/>
+		<mapper resource="info/model/Product.xml"/>
+		<mapper resource="info/model/CartProduct.xml"/>
+		<mapper resource="info/model/Orders.xml"/>
 	</mappers>
 </configuration>

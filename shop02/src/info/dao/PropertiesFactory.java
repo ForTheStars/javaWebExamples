@@ -10,6 +10,7 @@ public class PropertiesFactory implements IFactoryDao {
 	private static PropertiesFactory f = new PropertiesFactory();
 	private static Map<String,Object> daos = new HashMap<String, Object>();
 	private PropertiesFactory() {	}
+	
 	public static IFactoryDao getInstance() {
 		return f;
 	}

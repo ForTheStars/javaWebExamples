@@ -28,33 +28,45 @@ create table t_orders(
 	status int(5),
 	user_id int(11),
 	address_id int(11),
+	price double,
 	CONSTRAINT FOREIGN KEY(user_id) REFERENCES t_user(id),
 	CONSTRAINT FOREIGN KEY(address_id) REFERENCES t_address(id)
 );
--- 创建类别表
+
+-- 创建商品种类表
 create table t_category(
 	id int(11) primary key auto_increment,
 	name varchar(100)
 );
--- 创建商品表
-create table t_goods(
+-- 创建产品表
+create table t_product(
 	id int(11) primary key auto_increment,
 	name varchar(100),
 	price double,
 	intro text,
 	img varchar(100),
 	stock int(10),
+	status int(2),
 	c_id int(10),
 	CONSTRAINT FOREIGN KEY(c_id) REFERENCES t_category(id)
 );
--- 创建商品订单联系表
-create table t_goods_orders(
+-- 创建产品订单联系表
+create table t_product_orders(
 	id int(11) primary key auto_increment,
-	goods_id int(10),
+	product_id int(10),
 	orders_id int(10),
-	CONSTRAINT FOREIGN KEY(goods_id) REFERENCES t_goods(id),
+	CONSTRAINT FOREIGN KEY(product_id) REFERENCES t_product(id),
 	CONSTRAINT FOREIGN KEY(orders_id) REFERENCES t_orders(id)
+);
+-- 创建购物车产品联系表
+create table t_cart_product(
+	id int(11) primary key auto_increment,
+	number int(10),
+	price double,
+	o_id int(11),
+	p_id int(11),
+	CONSTRAINT FOREIGN KEY(o_id) REFERENCES t_orders(id),
+	CONSTRAINT FOREIGN KEY(p_id) REFERENCES t_product(id)
 );
 -- 添加管理员数据
 insert into t_user values(null,'admin','123','超级管理员',1);
-
