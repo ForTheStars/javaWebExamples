@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="itat.zttc.shop.model.Orders">
+	<insert id="add" parameterType="Orders" useGeneratedKeys="true" keyProperty="id">
+		insert into t_orders (buy_date,status,user_id,address_id,price) value 
+			(#{buyDate},#{status},#{user.id},#{address.id},#{price})
+	</insert>
+	
+	<update id="update" parameterType="Orders">
+		update t_orders set price=#{price},status=#{status},pay_date=#{payDate}
+			, confirm_date=#{confirmDate} where id=#{id}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from t_orders where id=#{id}
+	</delete>
+	
+	<resultMap type="Orders" id="ordersMap" autoMapping="true">
+		<id column="oid" property="id"/>
+		<result column="pay_date" property="payDate"/>
+		<result column="buy_date" property="buyDate"/>
+		<result column="confirm_date" property="confirmDate"/>
+		<result column="ostatus" property="status"/>
+		<result column="oprice" property="price"/>
+		<association property="user" javaType="User">
+			<id column="uid" property="id"/>
+			<result column="username" property="username"/>
+			<result column="nickname" property="nickname"/>
+			<result column="type" property="type"/>
+		</association>
+		<association property="address" javaType="Address">
+			<id column="aid" property="id"/>
+			<result column="aname" property="name"/>
+			<result column="phone" property="phone"/>
+			<result column="postcode" property="postcode"/>
+		</association>
+		<collection property="products" ofType="CartProduct">
+			<id column="cpid" property="id"/>
+			<result column="number" property="number"/>
+			<result column="cpprice" property="price"/>
+			<result column="pid" property="pid"/>
+			<association property="product" javaType="Product">
+				<id column="pid" property="id"/>
+				<result column="pname" property="name"/>
+				<result column="pprice" property="price"/>
+				<result column="pstatus" property="status"/>
+				<result column="img" property="img"/>
+			</association>
+		</collection>
+	</resultMap>
+	
+	<select id="load" parameterType="int" resultMap="ordersMap">
+		select *,t1.id as 'oid',t1.status as 'ostatus',t1.price as 'oprice',
+			t2.id as 'uid',t3.id as 'aid',t3.name as 'aname',
+			t4.id as 'cpid',t4.price as 'cpprice',
+			t5.id as 'pid',t5.price as 'pprice',t5.status as 'pstatus',t5.name as 'pname'
+		    from t_orders t1 left join t_user t2 on(t1.user_id=t2.id) 
+			left join t_address t3 on(t1.address_id=t3.id) 
+			left join t_cart_product t4 on(t1.id=t4.o_id) 
+			left join t_product t5 on(t4.p_id=t5.id) where t1.id=#{id}
+	</select>
+	
+	<!-- #{sx}会使用?进行替代 ，$(xx)会完整将字符串完成替代-->
+	<select id="find_by_user" resultMap="ordersMap" parameterType="map">
+		select *,t1.id as 'oid',t1.status as 'ostatus',t1.price as 'oprice',
+			t2.id as 'uid',t3.id as 'aid',t3.name as 'aname',
+			t4.id as 'cpid',t4.price as 'cpprice',
+			t5.id as 'pid',t5.price as 'pprice',t5.status as 'pstatus',t5.name as 'pname'
+		    from t_orders t1 left join t_user t2 on(t1.user_id=t2.id) 
+			left join t_address t3 on(t1.address_id=t3.id) 
+			left join t_cart_product t4 on(t1.id=t4.o_id) 
+			left join t_product t5 on(t4.p_id=t5.id)
+		<!-- 动态SQL -->
+		<where>
+			<if test="userId!=null"> t2.id=#{userId}</if>
+			<if test="status!=null"> and t1.status=#{status}</if>
+		</where>
+		
+		<if test="sort!=null">
+			order by ${sort}
+			<if test="order!=null">
+			${order}
+			</if>
+			<!-- <choose>
+				<when test="order!=null">${order}</when>
+				<otherwise>asc</otherwise>
+			</choose> -->
+		</if>
+		limit #{pageOffset},#{pageSize}
+	</select>
+	
+	<select id="find_by_status" resultMap="ordersMap" parameterType="map">
+		select *,t1.id as 'oid',t1.status as 'ostatus',t1.price as 'oprice',
+			t2.id as 'uid',t3.id as 'aid',t3.name as 'aname',
+			t4.id as 'cpid',t4.price as 'cpprice',
+			t5.id as 'pid',t5.price as 'pprice',t5.status as 'pstatus',t5.name as 'pname'
+		    from t_orders t1 left join t_user t2 on(t1.user_id=t2.id) 
+			left join t_address t3 on(t1.address_id=t3.id) 
+			left join t_cart_product t4 on(t1.id=t4.o_id) 
+			left join t_product t5 on(t4.p_id=t5.id)
+		<!-- 动态SQL -->
+		<where>
+			<if test="status!=null"> and t1.status=#{status}</if>
+		</where>
+		
+		<if test="sort!=null">
+			order by ${sort}
+			<if test="order!=null">
+			${order}
+			</if>
+			<!-- <choose>
+				<when test="order!=null">${order}</when>
+				<otherwise>asc</otherwise>
+			</choose> -->
+		</if>
+		limit #{pageOffset},#{pageSize}
+	</select>
+	
+	<select id="find_by_user_count" parameterType="map" resultType="int">
+		select count(*)
+		    from t_orders t1 left join t_user t2 on(t1.user_id=t2.id) 
+			left join t_address t3 on(t1.address_id=t3.id) 
+			left join t_cart_product t4 on(t1.id=t4.o_id) 
+			left join t_product t5 on(t4.p_id=t5.id)
+		<!-- 动态SQL -->
+		<where>
+			<if test="userId!=null"> t1.id=#{userId}</if>
+			<if test="status!=null"> and t1.status=#{status}</if>
+		</where>
+	</select>
+	
+	<select id="find_by_status_count" parameterType="map" resultType="int">
+		select count(*)
+		    from t_orders t1 left join t_user t2 on(t1.user_id=t2.id) 
+			left join t_address t3 on(t1.address_id=t3.id) 
+			left join t_cart_product t4 on(t1.id=t4.o_id) 
+			left join t_product t5 on(t4.p_id=t5.id)
+		<!-- 动态SQL -->
+		<where>
+			<if test="status!=null"> and t1.status=#{status}</if>
+		</where>
+	</select>
+</mapper>

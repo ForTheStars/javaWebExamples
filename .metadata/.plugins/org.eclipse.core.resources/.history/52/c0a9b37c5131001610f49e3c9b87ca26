@@ -1,0 +1,6 @@
+factory=itat.zttc.shop.dao.PropertiesFactory
+userDao = itat.zttc.shop.dao.UserDao
+addressDao = itat.zttc.shop.dao.AddressDao
+categoryDao = itat.zttc.shop.dao.CategoryDao
+productDao = itat.zttc.shop.dao.ProductDao
+ordersDao = itat.zttc.shop.dao.OrdersDao

@@ -1,0 +1,61 @@
+package info.test;
+
+import static org.junit.Assert.*;
+
+import java.util.Date;
+
+import org.junit.Test;
+
+import info.dao.AddressDao;
+import info.dao.IOrdersDao;
+import info.dao.UserDao;
+import info.model.Address;
+import info.model.Orders;
+import info.model.ShopDi;
+import info.model.User;
+
+public class TestOrderDao extends BaseTest {
+	private IOrdersDao ordersDao;
+	private UserDao userDao;
+	private AddressDao addressDao;
+	
+	public IOrdersDao getOrdersDao() {
+		return ordersDao;
+	}
+	@ShopDi
+	public void setOrdersDao(IOrdersDao ordersDao) {
+		this.ordersDao = ordersDao;
+	}
+	public UserDao getUserDao() {
+		return userDao;
+	}
+	@ShopDi
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
+	public AddressDao getAddressDao() {
+		return addressDao;
+	}
+	@ShopDi
+	public void setAddressDao(AddressDao addressDao) {
+		this.addressDao = addressDao;
+	}
+	
+	
+	@Test
+	public void TestAdd() {
+		Orders orders = new Orders();
+		orders.setBuyDate(new Date(116,6,14));
+		orders.setStatus(2);
+		ordersDao.add(orders, user, 1, cps);
+		
+	}
+	
+	@Test
+	public void testLoad() {
+//		Orders orders = ordersDao.load(2);
+		System.out.println();
+	}
+	
+
+}

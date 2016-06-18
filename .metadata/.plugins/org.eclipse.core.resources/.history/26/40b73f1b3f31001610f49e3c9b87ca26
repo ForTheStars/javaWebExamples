@@ -1,0 +1,26 @@
+package info.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import info.dao.IUserDao;
+import info.model.ShopDi;
+
+public class TestUserDao extends BaseTest {
+	private IUserDao ud;
+	
+	public IUserDao getUd() {
+		return ud;
+	}
+	@ShopDi("userDao")
+	public void setUd(IUserDao ud) {
+		this.ud = ud;
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

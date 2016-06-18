@@ -1,0 +1,22 @@
+package info.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import com.sun.org.apache.bcel.internal.generic.AALOAD;
+
+import info.model.ShopDi;
+
+public class TestAnnotation {
+	
+	@ShopDi("addressDao")
+	public void aa(){
+		
+	}
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

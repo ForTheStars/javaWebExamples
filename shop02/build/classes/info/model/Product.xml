@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="info.model.Product">
+	<insert id="add" parameterType="Product">
+		insert into t_product (name,price,intro,img,stock,status,c_id) value
+			(#{name},#{price},#{intro},#{img},#{stock},#{status},#{category.id})
+	</insert>
+	
+	<update id="update" parameterType="Product">
+		update t_product set 
+			name=#{name},price=#{price},intro=#{intro},img=#{img},stock=#{stock},
+			status=#{status},c_id=#{category.id} 
+			where id=#{id}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from t_product where id=#{id}
+	</delete>
+	<!-- 当数据库中的字段信息和对象的属性不一致时需要通过resultMap来映射 -->
+	<resultMap type="Product" id="productMap" autoMapping="true">
+		<id column="id" property="id"/>
+		<association property="category" javaType="Category">
+			<id column="c_id" property="id"/>
+			<result column="c_name" property="name"/>
+		</association>
+	</resultMap>
+	
+	<select id="load" parameterType="int" resultMap="productMap">
+		select t1.*,t2.name as 'c_name',t2.id as 'c_id' from 
+			t_product t1 left join t_category t2 on(t1.c_id=t2.id) where t1.id=#{id}
+	</select>
+	
+	<select id="find" resultMap="productMap" parameterType="map">
+		select t1.*,t2.name as 'c_name',t2.id as 'c_id' from 
+			t_product t1 left join t_category t2 on(t1.c_id=t2.id)
+		<!-- 动态SQL -->
+		<where>
+			<if test="name!=null"> name like #{name}</if>
+			<if test="cid!=null"> and c_id=#{cid}</if>
+			<if test="status!=null"> and status=#{status}</if>
+		</where>
+		
+		<if test="sort!=null">
+			order by ${sort}
+			<if test="order!=null">
+			${order}
+			</if>
+			<!-- <choose>
+				<when test="order!=null">${order}</when>
+				<otherwise>asc</otherwise>
+			</choose> -->
+		</if>
+		limit #{pageOffset},#{pageSize}
+	</select>
+	
+	<select id="find_count" parameterType="map" resultType="int">
+		select count(*) from t_product 
+		<where>
+			<if test="name!=null"> name like #{name}</if>
+			<if test="cid!=null"> and c_id=#{cid}</if>
+			<if test="status!=null"> and status=#{status}</if>
+		</where>
+	</select>
+	
+</mapper>

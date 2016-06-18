@@ -1,0 +1,27 @@
+package info.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import info.dao.IOrdersDao;
+import info.model.ShopDi;
+
+public class TestOrderDao extends BaseTest {
+	private IOrdersDao ordersDao;
+	
+	public IOrdersDao getOrdersDao() {
+		return ordersDao;
+	}
+	
+	@ShopDi
+	public void setOrdersDao(IOrdersDao ordersDao) {
+		this.ordersDao = ordersDao;
+	}
+
+	@Test
+	public void testLoad() {
+		fail("Not yet implemented");
+	}
+
+}
