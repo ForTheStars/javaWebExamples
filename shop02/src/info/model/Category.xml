@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="info.model.Category">
+	<insert id="add" parameterType="Category">
+		insert into t_category (name) value 
+			(#{name})
+	</insert>
+	
+	<update id="update" parameterType="Category">
+		update t_category set name=#{name} where id=#{id}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from t_category where id=#{id}
+	</delete>
+	
+	<select id="load" parameterType="int" resultType="Category">
+		select * from t_category where id=#{id}
+	</select>
+	
+	<!-- #{sx}会使用?进行替代 ，$(xx)会完整将字符串完成替代-->
+	<select id="list" resultType="Category" parameterType="map">
+		select * from t_category
+		<!-- 动态SQL -->
+		<where>
+			<if test="name!=null"> name like #{name}</if>
+		</where>
+	</select>
+</mapper>
