@@ -30,7 +30,7 @@ public class AdminCheckFilter implements Filter {
 		HttpSession session = req.getSession();
 		User user = (User)session.getAttribute("loginUser"); //验证是否 登入，获取用户
 		if(user == null){
-			respon.sendRedirect(req.getContentType()+"/loginInput.jsp"); //客户端跳转
+			respon.sendRedirect(req.getContextPath()+"/loginInput.jsp"); //客户端跳转
 			return;
 		}
 		filterChain.doFilter(request, response);

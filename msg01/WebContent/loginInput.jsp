@@ -7,9 +7,9 @@
 <title>用户登入</title>
 </head>
 <body>
+<br/>
 <h2 align="center">用户登入</h2>
 <br/>
-<%=application.getRealPath("/") %>
 <hr/>
 <br/><br/><br/>
 <form action="login.jsp" method="post" style="text-align:center">

@@ -13,11 +13,12 @@ public class DBUtil {
 		String url = "jdbc:mysql://localhost:3306/msg";
 		Connection connection = null;
 		try {
-			//"jdbc:mysql://localhost:3306/XX","root","XXXX"
+			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(url,username,password);
-			//connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/msg","root","8123456");
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} catch (ClassNotFoundException e1) {
+			e1.printStackTrace();
 		}
 		return connection;
 	}

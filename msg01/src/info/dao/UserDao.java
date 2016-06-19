@@ -37,6 +37,7 @@ public class UserDao implements IUserDao {
 			preparedStatement.setString(3, user.getNickname());
 			preparedStatement.setInt(4, user.getType());
 			preparedStatement.setInt(5, user.getStatus());
+			preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
@@ -72,13 +73,15 @@ public class UserDao implements IUserDao {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		try {
-			String sql = "update t_user set password=?,nickname=?,type=?,status=? where id=?";
+			connection = DBUtil.getConnection();
+			String sql = "update t_user set username=?,password=?,nickname=?,type=?,status=? where id=?";
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, user.getPassword());
-			preparedStatement.setString(2, user.getNickname());
-			preparedStatement.setInt(3, user.getType());
-			preparedStatement.setInt(4, user.getStatus());
-			preparedStatement.setInt(5, user.getId());
+			preparedStatement.setString(1, user.getUsername());
+			preparedStatement.setString(2, user.getPassword());
+			preparedStatement.setString(3, user.getNickname());
+			preparedStatement.setInt(4, user.getType());
+			preparedStatement.setInt(5, user.getStatus());
+			preparedStatement.setInt(6, user.getId());
 			preparedStatement.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

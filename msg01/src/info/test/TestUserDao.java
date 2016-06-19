@@ -1,20 +1,18 @@
 package info.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
+
+import java.util.Random;
 
 import org.junit.Test;
 
 import info.dao.DAOFactory;
 import info.dao.IUserDao;
-import info.dao.UserDao;
 import info.model.User;
 
 public class TestUserDao {
+	
 	private IUserDao userDao = DAOFactory.getUserDao();
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
 	
 	@Test
 	public void testLogin(){
@@ -27,4 +25,13 @@ public class TestUserDao {
 		User user = userDao.load(1);
 		System.out.println(user.getNickname()+" "+user.getPassword());
 	}
+	
+	@Test
+	public void testUpdate(){
+		User user = userDao.load(556);
+		user.setStatus(0);
+		userDao.update(user);
+		System.out.println(userDao.load(556).getStatus());
+	}
+	
 }
