@@ -5,11 +5,19 @@ import java.util.List;
 public class Pager<E> {
 	private int pageIndex;	//第几页
 	private int pageSize;	//每页显示多少条
+	private int pageOffset; //分页的开始值
 	private int totalRecord;//总共多少条记录
 	private int totalPage;  //总共多少页
 	private List<E> datas;	//放置具体数据的列表
 	
 	
+	
+	public int getPageOffset() {
+		return pageOffset;
+	}
+	public void setPageOffset(int pageOffset) {
+		this.pageOffset = pageOffset;
+	}
 	public int getPageIndex() {
 		return pageIndex;
 	}

@@ -24,16 +24,16 @@ public class SystemContextFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
 			throws IOException, ServletException {
 		try {
-			int pageIndex = 1;
+			int pageOffset = 0;
 			try {
-				pageIndex = Integer.parseInt(request.getParameter("pageIndex"));
+				pageOffset = Integer.parseInt(request.getParameter("pager.offset"));
 			} catch (NumberFormatException e) {
 			}
-			SystemContext.setPageIndex(pageIndex);
+			SystemContext.setPageOffset(pageOffset);
 			SystemContext.setPageSize(pageSize);
 			filterChain.doFilter(request, response);
 		} finally {
-			SystemContext.removePageIndex();
+			SystemContext.removePageOffset();
 			SystemContext.removePageSize();
 		}
 	}

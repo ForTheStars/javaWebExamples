@@ -121,7 +121,7 @@ public class UserDao implements IUserDao {
 
 	@Override
 	public Pager<User> list(String condition) {
-		int pageIndex = SystemContext.getPageIndex();
+		int pageOffset = SystemContext.getPageOffset();
 		int pageSize = SystemContext.getPageSize();
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -130,8 +130,6 @@ public class UserDao implements IUserDao {
 		List<User> users = new ArrayList<>();
 		User user = null;
 		try {
-			if(pageIndex <= 0)  pageIndex = 1;
-			int start = (pageIndex - 1)*pageSize;
 			connection = DBUtil.getConnection();
 			String sql = "select * from t_user";
 			String sqlCount = "select count(*) from t_user";
@@ -142,7 +140,7 @@ public class UserDao implements IUserDao {
 			// 获取当前页面 用户信息
 			sql+=" limit ?,?";
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, start);
+			preparedStatement.setInt(1, pageOffset);
 			preparedStatement.setInt(2, pageSize);
 			resultSet = preparedStatement.executeQuery();
 			while(resultSet.next()){
@@ -163,7 +161,7 @@ public class UserDao implements IUserDao {
 				totalRecord = resultSet.getInt(1);
 			}
 			int totalPage = (totalRecord-1)/pageSize + 1;  //计算该分几页显示
-			pages.setPageIndex(pageIndex);
+			pages.setPageOffset(pageOffset);
 			pages.setPageSize(pageSize);
 			pages.setTotalPage(totalPage);
 			pages.setTotalRecord(totalRecord);

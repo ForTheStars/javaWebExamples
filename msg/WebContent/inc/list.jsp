@@ -37,11 +37,6 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="7">
-			一共有：<%=pages.getTotalRecord() %>条记录,当前是第<%=pageIndex %>页,每页显示<%=pages.getPageSize() %>条记录
-		</td>
-	</tr>
-	<tr>
 	<td>用户标识</td><td>用户名</td><td>用户密码</td><td>用户昵称</td>
 	<td>用户类型</td><td>用户状态</td>
 	<td>操作</td>
@@ -118,32 +113,10 @@
 	%>
 	<tr>
 		<td colspan="7" style="font-size:12px">
-			<a href="list.jsp?pageIndex=1">首页</a>
-			<%
-				if(pages.getPageIndex() > 1){
-					%>
-						<a href="list.jsp?pageIndex=<%=(pageIndex-1)%>&search=<%=search %>">上一页</a>
-					<%
-				}
-			int totalPage = pages.getTotalPage();
-			for(int i=1;i<=totalPage;i++) {
-				if(i == pageIndex){
-					%>
-					<%= i %>
-					<%
-				}else{
-					%>
-					<a href="list.jsp?pageIndex=<%=i%>&search=<%=search %>">[<%=i %>]</a>
-					<%
-				}
-			}
-			if(pageIndex < totalPage){
-				%>
-				<a href="list.jsp?pageIndex=<%=(pageIndex+1)%>&search=<%=search %>">下一页</a>
-				<%
-			}
-			%>
-			<a href="list.jsp?pageIndex=<%=totalPage%>&search=<%=search %>">尾页</a>
+			<jsp:include page="/inc/pager.jsp">
+				<jsp:param value="<%=pages.getTotalRecord() %>" name="items"/>
+				<jsp:param value="<%=search %>" name="params"/>
+			</jsp:include>
 		</td>
 	</tr>
 </table>
