@@ -55,7 +55,7 @@ public class CommentDao implements ICommentDao {
 		PreparedStatement preparedStatement = null;
 		try {
 			connection = DBUtil.getConnection();
-			String sql = "delete from t_comment where msg_id=?";
+			String sql = "delete from t_comment where id=?";
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, id);
 			preparedStatement.executeUpdate();
@@ -76,6 +76,7 @@ public class CommentDao implements ICommentDao {
 		try {
 			connection = DBUtil.getConnection();
 			String sql = "select * from t_comment where id=?";
+			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, id);
 			resultSet = preparedStatement.executeQuery();
 			while(resultSet.next()){

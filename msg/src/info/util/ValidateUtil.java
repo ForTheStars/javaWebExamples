@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import info.model.User;
 
 public class ValidateUtil {
 	public static boolean validateNull(HttpServletRequest request,String[] fields){
@@ -26,5 +29,13 @@ public class ValidateUtil {
 		String msg = errorMsg.get(field);
 		if(msg == null) return "";
 		return msg;
+	}
+	
+	public static boolean checkAdminOrSelf(HttpSession session,int userId) {
+		User u = (User)session.getAttribute("loginUser");
+		if(u==null) return false;
+		if(u.getType()==1) return true;
+		if(u.getId()==userId) return true;
+		return false;
 	}
 }

@@ -11,6 +11,9 @@
 <h2 align="center">用户登入</h2>
 <br/>
 <hr/>
+<p style="text-align:right" >
+<a href="<%=request.getContextPath() %>/msg/list.jsp">查看留言</a>
+</p>
 <br/><br/><br/>
 <form action="login.jsp" method="post" style="text-align:center">
 	用户名称：<input type="text" name="username"/><br/><br/>

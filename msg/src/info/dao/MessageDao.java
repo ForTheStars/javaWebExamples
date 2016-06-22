@@ -75,7 +75,7 @@ public class MessageDao implements IMessageDao {
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, id);
 			preparedStatement.executeUpdate();
-			sql = "delect from t_msg where id = ?";
+			sql = "delete from t_msg where id = ?";
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, id);
 			preparedStatement.executeUpdate();
@@ -96,6 +96,7 @@ public class MessageDao implements IMessageDao {
 		try {
 			connection = DBUtil.getConnection();
 			String sql = "select * from t_msg where id=?";
+			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, id);
 			resultSet = preparedStatement.executeQuery();
 			while(resultSet.next()){
