@@ -22,8 +22,11 @@ public class DBUtil {
 		
 		Connection connection = null;
 		try {
+			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(url,username,password);
 		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		return connection;

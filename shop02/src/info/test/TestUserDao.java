@@ -27,10 +27,10 @@ public class TestUserDao extends BaseTest {
 	@Test
 	public void testAdd() {
 		User user = new User();
-		user.setNickname("大大");
+		user.setNickname("呵呵");
 		user.setPassword("23333");
 		user.setType(1);
-		user.setUsername("dada");
+		user.setUsername("hh");
 		ud.add(user);
 	}
 	
