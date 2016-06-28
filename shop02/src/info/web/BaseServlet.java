@@ -28,11 +28,14 @@ public class BaseServlet extends HttpServlet {
 		return errors;
 	}
 	
-	protected boolean hasErrors(){
-		if(errors != null && errors.size() > 0){
-			return true;
-		}
+	protected boolean hasErrors() {
+		if(errors!=null&&errors.size()>0) return true;
 		return false;
+	}
+	
+	protected String handleException(Exception e,HttpServletRequest req) {
+		req.setAttribute("errorMsg",e.getMessage());
+		return "inc/error.jsp";
 	}
 	
 	@Override
@@ -45,7 +48,6 @@ public class BaseServlet extends HttpServlet {
 			}
 			DaoUtil.diDao(this);
 			String method = req.getParameter("method");
-			System.out.println("-----------------"+method+"--------------");
 			Method m = this.getClass().getMethod(method, HttpServletRequest.class,HttpServletResponse.class);
 			int flag = checkAuth(req, resp, m);
 			if(flag == 1){
