@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+		<!-- 设置访问名称的后缀 -->
+	<constant name="struts.action.extension" value="action,do,,"/>
+	<constant name="struts.configuration.xml.reload" value="true" />
+    	<!-- 使用方法二必须开启(true)，使用方法三必须关闭(false) -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    	<!-- 表示Action由Spring来进行创建，可以直接使用Spring依赖注入来注入 -->
+    <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+    
+    <package name="default" namespace="/" extends="struts-default">
+   		<global-results>
+   			<result name="error">/WEB-INF/jsp/inc/error.jsp</result>
+    		<result name="exception">/WEB-INF/jsp/inc/exception.jsp</result>
+   			<result name="loginInput">/WEB-INF/Login/input.jsp</result>
+   		</global-results>
+   			<!-- 定义异常处理界面 -->
+   		<global-exception-mappings>
+   			<exception-mapping result="exception" exception="info.exception.UserException" />
+   		</global-exception-mappings>
+      		<!-- 方法三：基于通配符的方式 -->
+      	<action name="*_*" class="{1}Action" method="{2}">
+      		<result>/WEB-INF/jsp/{1}/{2}.jsp</result>
+      		<result name="input">/WEB-INF/jsp/{1}/{2}Input.jsp</result>
+      		<result type="redirect" name="redirect">${url}</result>
+     	 </action>
+    </package>
+</struts>
