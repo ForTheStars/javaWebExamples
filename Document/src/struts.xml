@@ -13,6 +13,13 @@
     <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
     
     <package name="default" namespace="/" extends="struts-default">
+   		<interceptors>
+    		<interceptor name="authInterceptor" class="authInterceptor"/>
+    		<interceptor-stack name="authStack">
+    			<interceptor-ref name="defaultStack"/>
+    			<interceptor-ref name="authInterceptor"/>
+    		</interceptor-stack>
+    	</interceptors>
    		<global-results>
    			<result name="error">/WEB-INF/jsp/inc/error.jsp</result>
     		<result name="exception">/WEB-INF/jsp/inc/exception.jsp</result>
@@ -22,11 +29,16 @@
    		<global-exception-mappings>
    			<exception-mapping result="exception" exception="info.exception.DocumentException" />
    		</global-exception-mappings>
+   		
+   		<action name="login" class="loginAction">
+   			<result type="redirect" name="redirect">${url}</result>
+   		</action>
       		<!-- 方法三：基于通配符的方式 -->
       	<action name="*_*" class="{1}Action" method="{2}">
       		<result>/WEB-INF/jsp/{1}/{2}.jsp</result>
       		<result name="input">/WEB-INF/jsp/{1}/{2}Input.jsp</result>
       		<result type="redirect" name="redirect">${url}</result>
+     	 	<interceptor-ref name="authStack"></interceptor-ref>
      	 </action>
     </package>
 </struts>

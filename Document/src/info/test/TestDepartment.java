@@ -21,7 +21,7 @@ public class TestDepartment {
 	@Test
 	public void testAdd() {
 		Department department = new Department();
-		department.setName("人事处");
+		department.setName("管理中心");
 		departmentService.add(department);
 	}
 	
