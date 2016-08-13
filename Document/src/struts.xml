@@ -16,11 +16,11 @@
    		<global-results>
    			<result name="error">/WEB-INF/jsp/inc/error.jsp</result>
     		<result name="exception">/WEB-INF/jsp/inc/exception.jsp</result>
-   			<result name="loginInput">/WEB-INF/Login/input.jsp</result>
+   			<result name="login">/WEB-INF/jsp/login.jsp</result>
    		</global-results>
    			<!-- 定义异常处理界面 -->
    		<global-exception-mappings>
-   			<exception-mapping result="exception" exception="info.exception.UserException" />
+   			<exception-mapping result="exception" exception="info.exception.DocumentException" />
    		</global-exception-mappings>
       		<!-- 方法三：基于通配符的方式 -->
       	<action name="*_*" class="{1}Action" method="{2}">
