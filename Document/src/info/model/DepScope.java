@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Table(name="t_dep_scope")
 public class DepScope {
 	private int id;
-	private int depID;	//要设置的部门id
+	private int depId;	//要设置的部门id
 	private Department scopeDep;	//可以发送信息的部门对象
 	
 	@Id
@@ -28,11 +28,11 @@ public class DepScope {
 		this.id = id;
 	}
 	@Column(name="dep_id")
-	public int getDepID() {
-		return depID;
+	public int getDepId() {
+		return depId;
 	}
-	public void setDepID(int depID) {
-		this.depID = depID;
+	public void setDepId(int depId) {
+		this.depId = depId;
 	}
 	@ManyToOne
 	@JoinColumn(name="s_dep_id")
