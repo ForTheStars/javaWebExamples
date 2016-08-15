@@ -10,6 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import info.model.User;
+import info.model.UserReadDocument;
 import info.service.IUserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)

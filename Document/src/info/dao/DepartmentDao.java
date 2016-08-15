@@ -27,7 +27,7 @@ public class DepartmentDao extends BaseDao<Department> implements IDepartmentDao
 	public List<Department> listSendDepByUser(int id) {
 		String sql = "select dep.id,dep.name from " +
 				"t_user user left join t_dep_scope ds on(ds.dep_id=user.dep_id) left join" +
-				" t_dep dep on(dep.id=ds.s_dep_id) where user.id=?";
+				" t_department dep on(dep.id=ds.s_dep_id) where user.id=?";
 		return this.getSession().createSQLQuery(sql)
 			.setResultTransformer(Transformers.aliasToBean(Department.class))
 			.setParameter(0, id).list();
