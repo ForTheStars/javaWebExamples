@@ -9,9 +9,9 @@
 </head>
 <body>
 <s:form action="login_login" method="post">
-<s:textfield name="username" label="用户名"/>
-<s:password name="password" label="用户密码"/>
-<s:submit value="登录"/>
+	<s:textfield name="username" label="用户名"/>
+	<s:password name="password" label="用户密码"/>
+	<s:submit value="登录"/>
 </s:form>
 </body>
 </html>

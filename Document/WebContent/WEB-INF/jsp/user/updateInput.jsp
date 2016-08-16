@@ -16,7 +16,6 @@
 	<s:textfield label="用户邮件" name="email"/>
 	<s:radio list="#{'0':'普通用户','1':'管理员' }" listKey="key" listValue="value" label="用户类型" name="type"/>
 	<s:select list="#ds" listKey="id" listValue="name" name="depId" value="%{department.id}" label="用户所在部门"/>
-	
 	<s:submit value="修改用户"/>
 </s:form>
 </body>

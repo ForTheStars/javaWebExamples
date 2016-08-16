@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css" type="text/css"/>
 </head>
 <body>
-<table width="900" cellpadding="0" cellspacing="0" class="ct">
+<table width="900" cellpadding="0" cellspacing="0" align="center" class="ct">
 	<tr>
 	<td>标识:</td><td>${id }</td>
 	</tr>

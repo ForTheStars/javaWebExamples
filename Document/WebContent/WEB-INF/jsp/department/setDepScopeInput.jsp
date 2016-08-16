@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css" type="text/css"/>
+<title>部门发文管理设置</title>
 </head>
 <body>
 	<jsp:include page="nav.jsp"/>

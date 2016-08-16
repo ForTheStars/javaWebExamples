@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css" type="text/css"/>
 </head>
 <body>
-绑定的用户的邮箱：${loginUser.email }
+您的邮箱为：${loginUser.email }
 <s:form action="user_addEmail" method="post">
 	<input type="hidden" name="userId" value="${loginUser.id }"/>
 	<s:hidden name="update"/>

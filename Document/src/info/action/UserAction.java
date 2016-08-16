@@ -93,7 +93,11 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 			userService.addUserEmail(userEmail, userId);
 		} else {
 			UserEmail uEmail = userService.loadUserEmail(userId);
-			BeanUtils.copyProperties(uEmail, userEmail);
+			uEmail.setHost(userEmail.getHost());
+			uEmail.setPassword(userEmail.getPassword());
+			uEmail.setProtocol(userEmail.getProtocol());
+			uEmail.setUsername(userEmail.getUsername());
+			userService.updateUserEmail(uEmail);
 		}
 		ActionUtil.setUrl("/user_showSelf");
 		return ActionUtil.REDIRECT;
