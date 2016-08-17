@@ -1,4 +1,32 @@
-# javaWebExamples
-javaWebExamples of ForTheStars  
-Spring+SpringMVC+Mybatis
-**See the branch!**
+#网上商品管理系统
+
+##简要介绍
+该系统主要由用户管理，商品管理两部分组成 
+具备基本的增删改查功能    
+该系统简要模拟网上购物情景，系统用户可享受查看商品到加入购物车，提交订单到付款，由发货到确定收货  
+该系统采用Java语言编写，使用Tomcat服务器搭建，使用MyBatis持久层框架，使用MVC等设计模式
+
+
+##功能介绍
+
+* 用户管理
+    *  非系统用户具有`注册用户` `用户登入` `查看商品列表`功能
+    *  普通系统用户具有 `修改个人信息` `提交订单` `查看购物车` 等基本功能
+    *  管理系统用户增加`管理用户信息` `管理商品` 权限
+* 商品管理
+    *  系统管理员具有商品管理权限
+        * 增删商品以及修改商品信息
+        * 查看用户提交订单信息,发货商品
+        * 商品类别设置
+
+##简单使用操作
+用户注册
+
+    http://localhost:8080/shop/user.do?method=addInput
+用户登入
+
+    http://localhost:8080/shop/user.do?method=loginInput
+商品列表
+
+    http://localhost:8080/shop/product.do?method=list
+一切操作详情以配置环境为准
