@@ -20,7 +20,8 @@
 	ICommentDao commentDao = DAOFactory.getComment();
 	IUserDao userDao = DAOFactory.getUserDao();
 	int id = Integer.parseInt(request.getParameter("id"));
-	Pager<Comment> comments = commentDao.list(id);
+	Pager<Comment> pages = commentDao.list(id);
+	int pageIndex = pages.getPageIndex();
 	Message msg = msgDao.load(id);
 	User loginUser = (User)session.getAttribute("loginUser");
 %>
@@ -73,7 +74,7 @@ function pageInit()
 </table>
 <table  width="900" align="center" border="1">
 	<%
-	for(Comment com:comments.getDatas()){
+	for(Comment com:pages.getDatas()){
 		%>
 		<tr>
 			<td width="600px">
@@ -96,12 +97,38 @@ function pageInit()
 		<%
 	}
 	%>
-	<tr>
-		<td colspan="2">
-			<jsp:include page="/inc/pager.jsp">
-				<jsp:param value="<%=comments.getTotalRecord() %>" name="items"/>
-				<jsp:param value="id" name="params"/>
-			</jsp:include>
+		<tr>
+		<td colspan="2" style="font-size:14px">
+			<a href="show.jsp?pageIndex=1&id=<%=id%>">首页</a>
+			<%
+				if(pages.getPageIndex()>1) {
+			%>
+				<a href="show.jsp?pageIndex=<%=(pageIndex-1)%>&id=<%=id%>">上一页</a>
+			<%		
+				}
+			%>
+			<%
+			int totalPage = pages.getTotalPage();
+			for(int i=1;i<=totalPage;i++) {
+				if(i==pageIndex) {
+			%>
+				<%=i %>
+			<%		
+				} else {
+			%>
+				<a href="show.jsp?pageIndex=<%=i%>&id=<%=id%>">[<%=i %>]</a>
+			<%		
+				}
+			}
+			%> 
+			<%
+			if(pageIndex<totalPage) {
+			%>
+				<a href="show.jsp?pageIndex=<%=(pageIndex+1)%>&id=<%=id%>">下一页</a>
+			<%	
+			}
+			%>
+			<a href="show.jsp?pageIndex=<%=totalPage%>&id=<%=id%>">尾页</a>
 		</td>
 	</tr>
 </table>

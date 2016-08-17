@@ -15,6 +15,7 @@
 	IMessageDao msgDao = DAOFactory.getMessage();
 	IUserDao userDao = DAOFactory.getUserDao();
 	Pager<Message> pages = msgDao.list();
+	int pageIndex = pages.getPageIndex();
 	int totalRecord = pages.getTotalRecord();
 %>
 </head>
@@ -39,10 +40,37 @@
 	}
 	%>
 	<tr>
-		<td colspan="4">
-			<jsp:include page="/inc/pager.jsp">
-				<jsp:param value="<%=totalRecord %>" name="items"/>
-			</jsp:include>
+		<td colspan="4" style="font-size:14px">
+			<a href="list.jsp?pageIndex=1">首页</a>
+			<%
+				if(pages.getPageIndex()>1) {
+			%>
+				<a href="list.jsp?pageIndex=<%=(pageIndex-1)%>">上一页</a>
+			<%		
+				}
+			%>
+			<%
+			int totalPage = pages.getTotalPage();
+			for(int i=1;i<=totalPage;i++) {
+				if(i==pageIndex) {
+			%>
+				<%=i %>
+			<%		
+				} else {
+			%>
+				<a href="list.jsp?pageIndex=<%=i%>">[<%=i %>]</a>
+			<%		
+				}
+			}
+			%> 
+			<%
+			if(pageIndex<totalPage) {
+			%>
+				<a href="list.jsp?pageIndex=<%=(pageIndex+1)%>">下一页</a>
+			<%	
+			}
+			%>
+			<a href="list.jsp?pageIndex=<%=totalPage%>">尾页</a>
 		</td>
 	</tr>
 </table>

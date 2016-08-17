@@ -1,4 +1,4 @@
-package info.dao;
+ package info.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -103,19 +103,21 @@ public class CommentDao implements ICommentDao {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;
-		int pageOffset = SystemContext.getPageOffset();
+		int pageIndex = SystemContext.getPageIndex();
 		int pageSize = SystemContext.getPageSize();
 		List<Comment> datas = new ArrayList<>();
-		pages.setPageOffset(pageOffset);
+		pages.setPageIndex(pageIndex);
 		pages.setPageSize(pageSize);
 		pages.setDatas(datas);
 		try {
+			if(pageIndex<=0) pageIndex=1;
+			int start = (pageIndex-1)*pageSize;
 			connection = DBUtil.getConnection();
 			String sql = "select * from t_comment where msg_id=? order by post_date asc limit ?,?";
 			String sqlCount = "select count(*) from t_comment where msg_id=? order by post_date asc";
 			preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, msgId);
-			preparedStatement.setInt(2, pageOffset);
+			preparedStatement.setInt(2, start);
 			preparedStatement.setInt(3, pageSize);
 			resultSet = preparedStatement.executeQuery();
 			Comment comment = null;

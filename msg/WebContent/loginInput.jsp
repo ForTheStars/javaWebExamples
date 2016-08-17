@@ -17,7 +17,7 @@
 <br/><br/><br/>
 <form action="login.jsp" method="post" style="text-align:center">
 	用户名称：<input type="text" name="username"/><br/><br/>
-	用户密码：<input type="text" name="password"/><br/><br/>
+	用户密码：<input type="password" name="password"/><br/><br/>
 	<input type="submit" value="用户登入">
 </form>
 </body>

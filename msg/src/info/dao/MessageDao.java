@@ -123,18 +123,20 @@ public class MessageDao implements IMessageDao {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		ResultSet resultSet = null;
-		int pageOffset = SystemContext.getPageOffset();
+		int pageIndex = SystemContext.getPageIndex();
 		int pageSize = SystemContext.getPageSize();
 		List<Message> datas = new ArrayList<>();
-		pages.setPageOffset(pageOffset);
+		pages.setPageIndex(pageIndex);
 		pages.setPageSize(pageSize);
 		pages.setDatas(datas);
 		try {
+			if(pageIndex<=0) pageIndex=1;
+			int start = (pageIndex-1)*pageSize;
 			connection = DBUtil.getConnection();
 			String sql = "select * from t_msg order by post_date desc limit ?,?";
 			String sqlCount = "select count(*) from t_msg";
 			preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setInt(1, pageOffset);
+			preparedStatement.setInt(1, start);
 			preparedStatement.setInt(2, pageSize);
 			resultSet = preparedStatement.executeQuery();
 			Message message = null;
