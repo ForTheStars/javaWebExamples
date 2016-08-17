@@ -34,7 +34,7 @@ public class AddressServlet extends BaseServlet {
 			return "address/addInput.jsp";
 		}
 		addressDao.add(address, user.getId());
-		return redirPath(request.getContentType()+"/user.do?method=show&id="+user.getId());
+		return redirPath(request.getContextPath()+"/user.do?method=show&id="+user.getId());
 	}
 	
 	@Auth
@@ -42,7 +42,7 @@ public class AddressServlet extends BaseServlet {
 		int addressId = Integer.parseInt(request.getParameter("id"));
 		int userId = Integer.parseInt(request.getParameter("userId"));
 		addressDao.delete(addressId);
-		return redirPath(request.getContextPath()+"/user.do?method=shop&id="+userId);
+		return redirPath(request.getContextPath()+"/user.do?method=show&id="+userId);
 	}
 	
 	@Auth

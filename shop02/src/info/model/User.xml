@@ -21,7 +21,7 @@
 		<id column="user_id" property="id"/>
 		<collection property="addresses" ofType="Address">
 			<id column="a_id" property="id"/>
-			<result column="photo" property="photo"/>
+			<result column="phone" property="phone"/>
 			<result column="postcode" property="postcode"/>
 			<result column="name" property="name"/>
 		</collection>

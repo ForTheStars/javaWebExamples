@@ -17,7 +17,7 @@
 	<td>用户密码：</td><td><input type="password" name="password"/></td>
 	</tr>
 	<tr>
-	<td colspan="2">
+	<td colspan="2" >
 		<input type="submit" value="用户登录"/><input type="reset"/>
 	</td>
 	</tr>

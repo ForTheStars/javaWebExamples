@@ -49,10 +49,10 @@ public class TestOrderDao extends BaseTest {
 	public void TestAdd() {
 		Orders orders = new Orders();
 		List<CartProduct> cps = new ArrayList<CartProduct>();
-		orders.setBuyDate(new Date(116,7,14));
+		orders.setBuyDate(new Date());
 		orders.setStatus(3);
 		orders.setPrice(99.99);
-		ordersDao.add(orders, userDao.load(4), 1, cps);
+		ordersDao.add(orders, userDao.load(1), 1, cps);
 		
 	}
 	

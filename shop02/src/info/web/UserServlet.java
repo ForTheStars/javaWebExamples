@@ -123,7 +123,7 @@ public class UserServlet extends BaseServlet {
 			return "user/updateSelfInput.jsp";
 		}
 		userDao.update(user);
-		return redirPath("goods.do?method=list");
+		return redirPath("product.do?method=list");
 	}
 	
 	@Auth

@@ -69,7 +69,7 @@ public class TestUserDao extends BaseTest {
 	
 	@Test
 	public void testLoad(){
-		User user = ud.load(3);
+		User user = ud.load(1);
 		for(Address a:user.getAddresses()){
 			System.out.println(a);
 		}
